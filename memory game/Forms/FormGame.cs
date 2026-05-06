@@ -16,5 +16,10 @@ namespace memory_game.Forms
         {
             InitializeComponent();
         }
+
+        private void FormGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
