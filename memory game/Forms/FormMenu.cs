@@ -38,11 +38,11 @@ namespace memory_game.Forms
             }
 
             string nombre = txtPlayerName.Text.Trim();
-            //var juego = new FormGame(nombre, dificultad);
-            //juego.OnReturnToMenu += () => this.Show();
+            var juego = new FormGame(nombre, dificultad);
+            juego.OnReturnToMenu += () => this.Show();
 
             this.Hide();
-            //juego.Show();
+            juego.Show();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
