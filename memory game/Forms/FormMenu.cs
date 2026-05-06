@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using memory_game.Logic; // Esto permite que el Form reconozca a GameEngine y Difficulty
+using memory_game.Logic; // Acceso a GameEngine y Difficulty
 
 namespace memory_game.Forms
 {
@@ -8,16 +8,16 @@ namespace memory_game.Forms
     {
         public FormMenu()
         {
-            InitializeComponent(); // ¡No borres esto! Es lo que dibuja tus botones.
+            InitializeComponent();
             ConfigurarCombo();
         }
 
         private void ConfigurarCombo()
         {
             cmbDifficulty.Items.Clear();
-            cmbDifficulty.Items.Add("Fácil");
-            cmbDifficulty.Items.Add("Medio");
-            cmbDifficulty.Items.Add("Difícil");
+            cmbDifficulty.Items.Add("Easy");
+            cmbDifficulty.Items.Add("Medium");
+            cmbDifficulty.Items.Add("Hard");
             cmbDifficulty.SelectedIndex = 0;
         }
 
@@ -25,11 +25,10 @@ namespace memory_game.Forms
         {
             if (string.IsNullOrWhiteSpace(txtPlayerName.Text))
             {
-                MessageBox.Show("Escribe tu nombre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Write your name.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Usamos switch tradicional para evitar el error CS8370
             Difficulty dificultad;
             switch (cmbDifficulty.SelectedIndex)
             {

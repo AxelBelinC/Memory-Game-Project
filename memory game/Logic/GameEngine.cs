@@ -1,15 +1,12 @@
-﻿// Logic/GameEngine.cs
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace memory_game.Logic
 {
-    // ─── Enumeraciones públicas ────────────────────────────────────────
-
-    /// <summary>Niveles de dificultad disponibles en el menú.</summary>
+    // Niveles de dificultad disponibles en el menú.
     public enum Difficulty { Easy, Medium, Hard }
 
-    /// <summary>Resultado que retorna TryFlip para que el Form sepa qué hacer.</summary>
+    // Resultado que retorna TryFlip para que el Form sepa qué hacer.
     public enum FlipResult
     {
         FirstCard,  // Primera carta volteada, solo mostrar símbolo
@@ -20,8 +17,6 @@ namespace memory_game.Logic
         Invalid     // Carta ya volteada o ya emparejada
     }
 
-    // ─── Modelo de datos: Carta ────────────────────────────────────────
-
     public class Card
     {
         public int Id { get; set; }  // Índice único (0 a N-1)
@@ -30,23 +25,20 @@ namespace memory_game.Logic
         public bool IsMatched { get; set; } = false;
     }
 
-    // ─── Motor principal ───────────────────────────────────────────────
-
     public class GameEngine
     {
-        // ── Estado público (el Form lee esto para actualizar la UI) ──
+        // Estado público (el Form lo lee para actualizar la UI)
         public List<Card> Cards { get; private set; }
         public int Moves { get; private set; }
         public int MatchesFound { get; private set; }
         public int TotalPairs { get; private set; }
         public bool IsGameOver => MatchesFound == TotalPairs;
 
-        // ── Estado interno ────────────────────────────────────────────
+        // Estado interno
         private Card _firstCard = null;
         private bool _waitingForFlip = false;
 
-        // ── Configuración de cuadrícula por dificultad ────────────────
-        // Reemplaza el método GetGridSize por este:
+        // Configuración de cuadrícula por dificultad
         public static (int rows, int cols) GetGridSize(Difficulty d)
         {
             switch (d)
@@ -58,7 +50,7 @@ namespace memory_game.Logic
             }
         }
 
-        // ── Inicialización: baraja y coloca las cartas ─────────────────
+        // Inicialización: barajea y coloca las cartas
         public void Initialize(Difficulty difficulty)
         {
             var (rows, cols) = GetGridSize(difficulty);
@@ -87,7 +79,7 @@ namespace memory_game.Logic
                 Cards.Add(new Card { Id = id, PairValue = values[id] });
         }
 
-        // ── Lógica principal: llamar cuando el jugador presiona una carta ─
+        // Lógica principal: llamar cuando el jugador presiona una carta
         public FlipResult TryFlip(int cardId)
         {
             if (_waitingForFlip) return FlipResult.Blocked;
@@ -104,13 +96,13 @@ namespace memory_game.Logic
                 return FlipResult.FirstCard;
             }
 
-            // Segunda carta → incrementar movimientos
+            // Segunda carta = incrementar movimientos
             Moves++;
             var second = card;
 
             if (_firstCard.PairValue == second.PairValue)
             {
-                // ¡Coincidencia!
+                // Coincidencia
                 _firstCard.IsMatched = true;
                 second.IsMatched = true;
                 MatchesFound++;
@@ -119,7 +111,7 @@ namespace memory_game.Logic
             }
             else
             {
-                // No coinciden → bloquear hasta que el Form resuelva el delay
+                // No coinciden = bloquear hasta que el Form resuelva el delay
                 _waitingForFlip = true;
                 PendingMismatch = (_firstCard, second);
                 _firstCard = null;
@@ -127,7 +119,7 @@ namespace memory_game.Logic
             }
         }
 
-        // ── El Form llama esto después del delay visual (Timer de 800ms) ─
+        // (Timer de 800ms)
         public void ResolveMismatch()
         {
             if (PendingMismatch.HasValue)
@@ -139,10 +131,10 @@ namespace memory_game.Logic
             _waitingForFlip = false;
         }
 
-        // Par pendiente de resolución (visible al Form para animar si se desea)
+        // Par pendiente de resolución
         public (Card A, Card B)? PendingMismatch { get; private set; }
 
-        // ── Estadística: precisión del jugador ────────────────────────
+        // Estadística del jugador
         public int GetAccuracy()
         {
             if (Moves == 0) return 100;
