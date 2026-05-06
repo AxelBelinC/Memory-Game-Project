@@ -1,5 +1,4 @@
-﻿// Logic/ScoreManager.cs
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -41,7 +40,7 @@ namespace memory_game.Logic
             File.WriteAllText(FilePath, json);
         }
 
-        /// Agrega un puntaje y mantiene Top 5 por dificultad.
+        // Agrega un puntaje y mantiene Top 5 por dificultad.
         public static void AddScore(ScoreEntry entry)
         {
             var all = Load();
