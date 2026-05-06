@@ -12,10 +12,10 @@ This repository focuses on game logic and UI, featuring adjustable difficulty le
 
 ## Authors:
 
-- **Axel Armando Belin Castorena** B.Sc. in Intelligent Computing Engineering Universidad Autónoma de Aguascalientes (UAA)
+- **Axel Armando Belin Castorena** Sudent in Intelligent Computing Engineering Universidad Autónoma de Aguascalientes (UAA)
 
-- **Brandon Alejandro Herrera Rodríguez** B.Sc. in Intelligent Computing Engineering Universidad Autónoma de Aguascalientes (UAA)
+- **Brandon Alejandro Herrera Rodríguez** Student in Intelligent Computing Engineering Universidad Autónoma de Aguascalientes (UAA)
 
-- **Ian Christopher Hernández Mera** B.Sc. in Intelligent Computing Engineering Universidad Autónoma de Aguascalientes (UAA)
+- **Ian Christopher Hernández Mera** Student in Intelligent Computing Engineering Universidad Autónoma de Aguascalientes (UAA)
 
 ---
