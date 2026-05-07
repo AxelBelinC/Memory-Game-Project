@@ -28,38 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.lblDiff = new System.Windows.Forms.Label();
             this.cmbDifficulty = new System.Windows.Forms.ComboBox();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnStart, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 561);
+            this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStart.BackColor = System.Drawing.Color.White;
+            this.btnStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStart.BackgroundImage")));
+            this.btnStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.ForeColor = System.Drawing.Color.White;
+            this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnStart.Location = new System.Drawing.Point(274, 413);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(235, 70);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Controls.Add(this.lblDiff);
+            this.panel1.Controls.Add(this.cmbDifficulty);
+            this.panel1.Controls.Add(this.txtPlayerName);
+            this.panel1.Location = new System.Drawing.Point(256, 244);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(271, 127);
+            this.panel1.TabIndex = 8;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(312, 164);
+            this.lblName.Location = new System.Drawing.Point(9, 20);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(66, 24);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name:";
             // 
-            // txtPlayerName
-            // 
-            this.txtPlayerName.Location = new System.Drawing.Point(384, 169);
-            this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(100, 20);
-            this.txtPlayerName.TabIndex = 2;
-            // 
             // lblDiff
             // 
             this.lblDiff.AutoSize = true;
             this.lblDiff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiff.Location = new System.Drawing.Point(296, 244);
+            this.lblDiff.Location = new System.Drawing.Point(9, 76);
             this.lblDiff.Name = "lblDiff";
             this.lblDiff.Size = new System.Drawing.Size(82, 24);
             this.lblDiff.TabIndex = 3;
@@ -69,35 +117,24 @@
             // 
             this.cmbDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Location = new System.Drawing.Point(384, 249);
+            this.cmbDifficulty.Location = new System.Drawing.Point(133, 81);
             this.cmbDifficulty.Name = "cmbDifficulty";
             this.cmbDifficulty.Size = new System.Drawing.Size(121, 21);
             this.cmbDifficulty.TabIndex = 4;
             // 
-            // btnStart
+            // txtPlayerName
             // 
-            this.btnStart.Location = new System.Drawing.Point(355, 308);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(129, 72);
-            this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "START";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 349);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "pruebaxd";
+            this.txtPlayerName.Location = new System.Drawing.Point(133, 20);
+            this.txtPlayerName.Name = "txtPlayerName";
+            this.txtPlayerName.Size = new System.Drawing.Size(100, 20);
+            this.txtPlayerName.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::memory_game.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(496, 51);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(282, 85);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(219, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,22 +145,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::memory_game.Properties.Resources.Diseño_sin_título;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.cmbDifficulty);
-            this.Controls.Add(this.lblDiff);
-            this.Controls.Add(this.txtPlayerName);
-            this.Controls.Add(this.lblName);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormMenu";
             this.Text = "Form1";
             this.Click += new System.EventHandler(this.btnStart_Click);
+            this.Resize += new System.EventHandler(this.FormMenu_Resize);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -133,7 +166,8 @@
         private System.Windows.Forms.Label lblDiff;
         private System.Windows.Forms.ComboBox cmbDifficulty;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

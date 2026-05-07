@@ -1,6 +1,7 @@
-﻿using System;
+﻿using memory_game.Logic;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
-using memory_game.Logic; // Acceso a GameEngine y Difficulty
 
 namespace memory_game.Forms
 {
@@ -10,6 +11,8 @@ namespace memory_game.Forms
         {
             InitializeComponent();
             ConfigurarCombo();
+            this.DoubleBuffered = true;
+            this.MinimumSize = new Size(640, 480);
         }
 
         private void ConfigurarCombo()
@@ -48,6 +51,17 @@ namespace memory_game.Forms
         private void FormMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormMenu_Resize(object sender, EventArgs e)
+        {
+            this.SuspendLayout();
+            int targetWidth = (this.Height * 4) / 3;
+            if (this.Width != targetWidth)
+            {
+                this.Width = targetWidth;
+            }
+            this.ResumeLayout();
         }
     }
 }
