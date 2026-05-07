@@ -149,6 +149,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Click += new System.EventHandler(this.btnStart_Click);
             this.Resize += new System.EventHandler(this.FormMenu_Resize);

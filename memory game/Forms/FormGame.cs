@@ -38,6 +38,8 @@ namespace memory_game.Forms
             _playerName = playerName;
             _difficulty = difficulty;
             IniciarJuego();
+            this.DoubleBuffered = true;
+            this.MinimumSize = new Size(640, 480);
         }
 
         private void IniciarJuego()
@@ -95,7 +97,6 @@ namespace memory_game.Forms
             _clockTimer.Tick += (s, e) => { _elapsedSeconds++; ActualizarHUD(); };
             _clockTimer.Start();
 
-            // Timer de error (una sola vez cada 800ms)
             _mismatchTimer = new System.Windows.Forms.Timer { Interval = 800 };
             _mismatchTimer.Tick += (s, e) =>
             {
@@ -125,7 +126,7 @@ namespace memory_game.Forms
                 case FlipResult.Mismatch:
                     MostrarCarta(cardId);
                     ActualizarHUD();
-                    _mismatchTimer.Start();   // inicia delay visual
+                    _mismatchTimer.Start();
                     break;
 
                 case FlipResult.Victory:
@@ -134,11 +135,9 @@ namespace memory_game.Forms
                     ActualizarHUD();
                     MostrarVictoria();
                     break;
-                // Blocked e Invalid: no hacer nada
+                
             }
         }
-
-        // Interfaz
 
         private void MostrarCarta(int cardId)
         {
@@ -224,8 +223,6 @@ namespace memory_game.Forms
             victoria.Show();
         }
 
-        // Regresar al menú
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             _clockTimer?.Stop();
@@ -239,6 +236,17 @@ namespace memory_game.Forms
             _clockTimer?.Dispose();
             _mismatchTimer?.Dispose();
             base.OnFormClosed(e);
+        }
+
+        private void FormGame_Resize(object sender, EventArgs e)
+        {
+            this.SuspendLayout();
+            int targetWidth = (this.Height * 4) / 3;
+            if (this.Width != targetWidth)
+            {
+                this.Width = targetWidth;
+            }
+            this.ResumeLayout();
         }
     }
 }
