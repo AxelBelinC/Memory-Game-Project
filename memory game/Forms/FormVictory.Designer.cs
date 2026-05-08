@@ -61,6 +61,7 @@
             this.btnPlayAgain.TabIndex = 2;
             this.btnPlayAgain.Text = "Play Again";
             this.btnPlayAgain.UseVisualStyleBackColor = true;
+            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // btnExit
             // 
@@ -70,6 +71,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Back to Menu";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FormVictory
             // 

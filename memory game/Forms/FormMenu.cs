@@ -11,6 +11,7 @@ namespace memory_game.Forms
         {
             InitializeComponent();
             ConfigurarCombo();
+            ConfigurarComboTemas();
             this.DoubleBuffered = true;
             this.MinimumSize = new Size(640, 480);
         }
@@ -22,6 +23,15 @@ namespace memory_game.Forms
             cmbDifficulty.Items.Add("Medium");
             cmbDifficulty.Items.Add("Hard");
             cmbDifficulty.SelectedIndex = 0;
+        }
+
+        private void ConfigurarComboTemas()
+        {
+            cmbTheme.Items.Clear();
+            cmbTheme.Items.Add("Chemistry");
+            cmbTheme.Items.Add("Biology");
+            cmbTheme.Items.Add("Math");
+            cmbTheme.SelectedIndex = 0;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -46,11 +56,6 @@ namespace memory_game.Forms
 
             this.Hide();
             juego.Show();
-        }
-
-        private void FormMenu_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void FormMenu_Resize(object sender, EventArgs e)
