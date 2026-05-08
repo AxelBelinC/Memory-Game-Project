@@ -37,6 +37,8 @@
             this.cmbDifficulty = new System.Windows.Forms.ComboBox();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTheme = new System.Windows.Forms.Label();
+            this.cmbTheme = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,20 +86,22 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cmbTheme);
+            this.panel1.Controls.Add(this.lblTheme);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblDiff);
             this.panel1.Controls.Add(this.cmbDifficulty);
             this.panel1.Controls.Add(this.txtPlayerName);
-            this.panel1.Location = new System.Drawing.Point(256, 244);
+            this.panel1.Location = new System.Drawing.Point(250, 231);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(271, 127);
+            this.panel1.Size = new System.Drawing.Size(284, 153);
             this.panel1.TabIndex = 8;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(9, 20);
+            this.lblName.Location = new System.Drawing.Point(20, 16);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(66, 24);
             this.lblName.TabIndex = 1;
@@ -107,7 +111,7 @@
             // 
             this.lblDiff.AutoSize = true;
             this.lblDiff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiff.Location = new System.Drawing.Point(9, 76);
+            this.lblDiff.Location = new System.Drawing.Point(20, 67);
             this.lblDiff.Name = "lblDiff";
             this.lblDiff.Size = new System.Drawing.Size(82, 24);
             this.lblDiff.TabIndex = 3;
@@ -115,18 +119,24 @@
             // 
             // cmbDifficulty
             // 
+            this.cmbDifficulty.BackColor = System.Drawing.Color.Khaki;
             this.cmbDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDifficulty.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDifficulty.ForeColor = System.Drawing.SystemColors.Desktop;
             this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Location = new System.Drawing.Point(133, 81);
+            this.cmbDifficulty.Location = new System.Drawing.Point(123, 60);
             this.cmbDifficulty.Name = "cmbDifficulty";
-            this.cmbDifficulty.Size = new System.Drawing.Size(121, 21);
+            this.cmbDifficulty.Size = new System.Drawing.Size(136, 31);
             this.cmbDifficulty.TabIndex = 4;
             // 
             // txtPlayerName
             // 
-            this.txtPlayerName.Location = new System.Drawing.Point(133, 20);
+            this.txtPlayerName.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtPlayerName.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerName.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPlayerName.Location = new System.Drawing.Point(123, 16);
             this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(100, 20);
+            this.txtPlayerName.Size = new System.Drawing.Size(136, 27);
             this.txtPlayerName.TabIndex = 2;
             // 
             // pictureBox1
@@ -140,6 +150,29 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // lblTheme
+            // 
+            this.lblTheme.AutoSize = true;
+            this.lblTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTheme.Location = new System.Drawing.Point(20, 119);
+            this.lblTheme.Name = "lblTheme";
+            this.lblTheme.Size = new System.Drawing.Size(76, 24);
+            this.lblTheme.TabIndex = 5;
+            this.lblTheme.Text = "Theme:";
+            // 
+            // cmbTheme
+            // 
+            this.cmbTheme.BackColor = System.Drawing.Color.Khaki;
+            this.cmbTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTheme.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTheme.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.cmbTheme.FormattingEnabled = true;
+            this.cmbTheme.Location = new System.Drawing.Point(123, 112);
+            this.cmbTheme.Name = "cmbTheme";
+            this.cmbTheme.Size = new System.Drawing.Size(136, 31);
+            this.cmbTheme.TabIndex = 6;
             // 
             // FormMenu
             // 
@@ -170,5 +203,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTheme;
+        private System.Windows.Forms.ComboBox cmbTheme;
     }
 }

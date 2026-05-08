@@ -121,7 +121,7 @@
   <data name="tableLayoutPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqoAAAHpCAYAAABKoR41AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA7DVJREFUeF7s3QV0JOed/vtZ/C9ks8HdzWYpu2GwY2ZmZmZmZma2Y2bHFDAkTuw4
+        wAAADsABataJCQAA7DVJREFUeF7s3QV0JOed/vtZ/C9ks8HdzWYpu2GwY2ZmZmZmZma2Y2bHFDAkTuw4
         jiExJzEMSa0mNXOLm7Hg+Z8Xqru6qlpqaaTW2PP7nvOc8SZjZUYz997PfbtgyTf8OXzbn8d3/Xn8YLiI
         HwbKWC9UwwahKjYMVbFxqIJNQmVsGi5h83ABW4QL2Cqcx9bhPLaJiG0bzWM7vgK2jxawQ7SAHWN57BTL
         Y2e+AnaJFbBXrIgDoiUcFi3jcL4KjohWcGS0gqOjVRwjd2ys1tpx8Trf8YkG3wnJJt+JCbGTEk2cnFRw
@@ -1135,7 +1135,7 @@
   <data name="btnStart.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAErCAYAAABNQKnXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAdRdJREFUeF7tvYeXHNXx/v37o97jAAZsgg0GvoBNsA3YBgMmOoJJxoAJJjgCxtgY
+        wQAADsEBuJFr7QAAdRdJREFUeF7tvYeXHNXx/v37o97jAAZsgg0GvoBNsA3YBgMmOoJJxoAJJjgCxtgY
         g40C0kpa5ZyRVlrlnLNWYZXDKgvVe56506tW1YQOd3q6Z57nnM/hHDTd03tnpvs+detW/T+hKIqiKIqi
         KIqiKKrp+n/6f1AURVEURVEURVEUlb1o0CmKoiiKoiiKoigqB6JBpyiKoiiKoiiKoqgciAadoiiKoiiK
         oiiKonIgGnSKoiiKoiiKoiiKyoFo0CmKoiiKoiiKoigqB6JBpyiKoiiKoiiKoqgciAadoiiKoiiKoiiK
@@ -1641,7 +1641,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAH/CAYAAADE7/fuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAA/7JJREFUeF7s/YeXHNeV5ovOf3TfXe+tmTszImw5eFpRJNWS6IDysAQIVxaeDt7Q
+        vAAADrwBlbxySQAA/7JJREFUeF7s/YeXHNeV5ovOf3TfXe+tmTszImw5eFpRJNWS6IDysAQIVxaeDt7Q
         gIJIUaKRSIKELZO+HCCKBoT3ZUGZVrdahoT53trunBNRxW713HaizrfWVmZGRkZGRpSI9TvfNv/tv0VF
         RUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVF
         RUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVF

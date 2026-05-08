@@ -1,6 +1,7 @@
-﻿using System;
+﻿using memory_game.Logic;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
-using memory_game.Logic;
 
 namespace memory_game.Forms
 {
@@ -14,6 +15,8 @@ namespace memory_game.Forms
             InitializeComponent();
             MostrarEstadisticas(entry);
             MostrarLeaderboard(difficulty);
+            this.DoubleBuffered = true;
+            this.MinimumSize = new Size(640, 480);
         }
 
         private void MostrarEstadisticas(ScoreEntry entry)
@@ -51,6 +54,22 @@ namespace memory_game.Forms
         {
             this.Close();
             OnExit?.Invoke();
+        }
+
+        private void btnPlayAgain_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormVictory_Resize(object sender, EventArgs e)
+        {
+            this.SuspendLayout();
+            int targetWidth = (this.Height * 4) / 3;
+            if (this.Width != targetWidth)
+            {
+                this.Width = targetWidth;
+            }
+            this.ResumeLayout();
         }
     }
 }
