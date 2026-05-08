@@ -68,5 +68,10 @@ namespace memory_game.Forms
             }
             this.ResumeLayout();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
