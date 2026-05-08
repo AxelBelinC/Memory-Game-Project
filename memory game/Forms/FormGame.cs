@@ -13,6 +13,9 @@ namespace memory_game.Forms
         private readonly GameEngine _engine = new GameEngine();
         private readonly string _playerName;
         private readonly Difficulty _difficulty;
+        private readonly int _themeIndex;
+        private Image[] _imagenesA;
+        private Image[] _imagenesB;
 
         // Timers
         private System.Windows.Forms.Timer _clockTimer;
@@ -22,21 +25,14 @@ namespace memory_game.Forms
         // Botones del grid
         private Button[] _cardButtons;
 
-        // Símbolos para las cartas (12 pares = 24 distintos
-        private static readonly string[] SYMBOLS =
-        {
-            "🐶","🐱","🐭","🐹","🐰","🦊",
-            "🐻","🐼","🐨","🐯","🦁","🐮",
-            "🐷","🐸","🐙","🦋","🌸","🌺",
-            "🌻","🌹","⭐","🌙","☀️","🍀"
-        };
-
         // Constructor
-        public FormGame(string playerName, Difficulty difficulty)
+        public FormGame(string playerName, Difficulty difficulty, int themeIndex)
         {
             InitializeComponent();
             _playerName = playerName;
             _difficulty = difficulty;
+            _themeIndex = themeIndex;
+            CargarTema();
             IniciarJuego();
             this.DoubleBuffered = true;
             this.MinimumSize = new Size(640, 480);
@@ -87,6 +83,44 @@ namespace memory_game.Forms
                 btn.Click += CartaButton_Click;
                 _cardButtons[i] = btn;
                 tableLayoutPanel.Controls.Add(btn, i % cols, i / cols);
+            }
+        }
+
+        private void CargarTema()
+        {
+            if (_themeIndex == 0) // Química
+            {
+                _imagenesA = new Image[] {
+                    //Properties.Resources.celula_animal,
+                    //Properties.Resources.mitocondria,
+                    // hasta 12 elementos
+                };
+
+                _imagenesB = new Image[] {
+                    //Properties.Resources.def_celula_animal,
+                    //Properties.Resources.def_mitocondria,
+                    // hasta 12 en el mismo orden con el grupo de imagenes A
+                };
+            }
+            else if (_themeIndex == 1) //Biología
+            {
+                _imagenesA = new Image[] {
+
+                };
+
+                _imagenesB = new Image[] {
+
+                };
+            }
+            else if (_themeIndex == 2) //Matemáticas básicas
+            {
+                _imagenesA = new Image[] {
+
+                };
+
+                _imagenesB = new Image[] {
+
+                };
             }
         }
 
@@ -143,9 +177,18 @@ namespace memory_game.Forms
         {
             var card = _engine.Cards[cardId];
             var btn = _cardButtons[cardId];
-            btn.Text = SYMBOLS[card.PairValue];
+            //Elegimos el arreglo correcto según el side:
+            if (card.Side == 0)
+            {
+                btn.BackgroundImage = _imagenesA[card.PairValue];
+            } else
+            {
+                btn.BackgroundImage = _imagenesB[card.PairValue];
+            }
+            //Ajustando diseño de cartas
+            btn.BackgroundImageLayout = ImageLayout.Zoom;
+            btn.Text = "";
             btn.BackColor = Color.WhiteSmoke;
-            btn.ForeColor = Color.Black;
         }
 
         private void MarcarEmparejadas()
@@ -168,17 +211,18 @@ namespace memory_game.Forms
                 var btn = _cardButtons[card.Id];
                 if (card.IsMatched)
                 {
-                    btn.Text = SYMBOLS[card.PairValue];
+                    btn.BackgroundImage = (card.Side == 0) ? _imagenesA[card.PairValue] : _imagenesB[card.PairValue];
+                    btn.BackgroundImageLayout = ImageLayout.Zoom;
                     btn.BackColor = Color.MediumSeaGreen;
                     btn.Enabled = false;
                 }
                 else if (card.IsFlipped)
                 {
-                    btn.Text = SYMBOLS[card.PairValue];
                     btn.BackColor = Color.WhiteSmoke;
                 }
                 else
                 {
+                    btn.BackgroundImage = null;
                     btn.Text = "?";
                     btn.BackColor = Color.SteelBlue;
                     btn.ForeColor = Color.White;
@@ -211,7 +255,7 @@ namespace memory_game.Forms
             victoria.OnPlayAgain += () =>
             {
                 this.Close();
-                var nuevo = new FormGame(_playerName, _difficulty);
+                var nuevo = new FormGame(_playerName, _difficulty, _themeIndex);
                 nuevo.OnReturnToMenu += OnReturnToMenu;
                 nuevo.Show();
             };
