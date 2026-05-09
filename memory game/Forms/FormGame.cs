@@ -20,7 +20,8 @@ namespace memory_game.Forms
         // Timers
         private System.Windows.Forms.Timer _clockTimer;
         private System.Windows.Forms.Timer _mismatchTimer;
-        private int _elapsedSeconds = 0;
+        private int _remainingSeconds = 0;
+        private int _initialSeconds = 0;
 
         // Botones del grid
         private Button[] _cardButtons;
@@ -38,9 +39,25 @@ namespace memory_game.Forms
             this.MinimumSize = new Size(640, 480);
         }
 
-        private void IniciarJuego()
+        private void IniciarJuego() 
         {
-            _elapsedSeconds = 0;
+            switch (_difficulty)
+            {
+                case Difficulty.Easy:
+                    _initialSeconds = 120;
+                    break;
+                case Difficulty.Medium:
+                    _initialSeconds = 90;
+                    break;
+                case Difficulty.Hard:
+                    _initialSeconds = 60;
+                    break;
+                default:
+                    _initialSeconds = 120;
+                    break;
+            }
+            _remainingSeconds = _initialSeconds;
+
             _engine.Initialize(_difficulty);
             CrearGrid();
             CrearTimers();
@@ -86,7 +103,7 @@ namespace memory_game.Forms
             }
         }
 
-        private void CargarTema()
+        private void CargarTema() // Configurando imágenes
         {
             if (_themeIndex == 0) // Química
             {
@@ -145,8 +162,17 @@ namespace memory_game.Forms
         private void CrearTimers()
         {
             // Reloj
-            _clockTimer = new System.Windows.Forms.Timer { Interval = 1000 };
-            _clockTimer.Tick += (s, e) => { _elapsedSeconds++; ActualizarHUD(); };
+            _clockTimer = new System.Windows.Forms.Timer { Interval = 1000 }; // cambia cada segundo
+            _clockTimer.Tick += (s, e) => 
+            {
+                _remainingSeconds--;
+                ActualizarHUD();
+
+                if (_remainingSeconds <= 0)
+                {
+                    MostrarDerrota();
+                }
+            };
             _clockTimer.Start();
 
             _mismatchTimer = new System.Windows.Forms.Timer { Interval = 800 };
@@ -251,19 +277,23 @@ namespace memory_game.Forms
 
         private void ActualizarHUD()
         {
-            lblMoves.Text = $"Movimientos: {_engine.Moves}";
-            lblTimer.Text = $"{_elapsedSeconds / 60:00}:{_elapsedSeconds % 60:00}";
-            lblPairs.Text = $"Pares: {_engine.MatchesFound} / {_engine.TotalPairs}";
+            lblMoves.Text = $"Movements: {_engine.Moves}";
+            lblTimer.Text = $"{_remainingSeconds / 60:00}:{_remainingSeconds % 60:00}";
+            lblPairs.Text = $"Pairs: {_engine.MatchesFound} / {_engine.TotalPairs}";
+            lblMistakes.Text = $"Mistakes: {_engine.Mistakes}";
         }
 
-        private void MostrarVictoria()
+        private void MostrarVictoria() // Victoria
         {
+            int tiempoTotal = _initialSeconds - _remainingSeconds; // tiempo total de juego
+
             var entry = new Logic.ScoreEntry
             {
                 PlayerName = _playerName,
                 Difficulty = _difficulty.ToString(),
                 Moves = _engine.Moves,
-                Seconds = _elapsedSeconds,
+                Mistakes = _engine.Mistakes,
+                Seconds = tiempoTotal,
                 Accuracy = _engine.GetAccuracy(),
                 Date = DateTime.Now
             };
@@ -283,6 +313,28 @@ namespace memory_game.Forms
                 OnReturnToMenu?.Invoke();
             };
             victoria.Show();
+        }
+
+        private void MostrarDerrota() // Derrota
+        {
+            _clockTimer.Stop();
+            _mismatchTimer.Stop();
+
+            // Bloquear todas las cartas para que no pueda seguir dándoles clic
+            foreach (var btn in _cardButtons)
+            {
+                if (btn != null) btn.Enabled = false;
+            }
+
+            MessageBox.Show(
+                "¡Time's over! You have lost.",
+                "Game Over",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            this.Close();
+            OnReturnToMenu.Invoke();
         }
 
         private void btnReset_Click(object sender, EventArgs e)

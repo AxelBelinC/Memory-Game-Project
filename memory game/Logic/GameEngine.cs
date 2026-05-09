@@ -32,6 +32,7 @@ namespace memory_game.Logic
         public List<Card> Cards { get; private set; }
         public int Moves { get; private set; }
         public int MatchesFound { get; private set; }
+        public int Mistakes { get; private set; }
         public int TotalPairs { get; private set; }
         public bool IsGameOver => MatchesFound == TotalPairs;
 
@@ -57,6 +58,7 @@ namespace memory_game.Logic
             var (rows, cols) = GetGridSize(difficulty);
             TotalPairs = (rows * cols) / 2;
             Moves = 0;
+            Mistakes = 0;
             MatchesFound = 0;
             _firstCard = null;
             _waitingForFlip = false;
@@ -86,8 +88,6 @@ namespace memory_game.Logic
                 mazo[id].Id = id; // Posición final en tablero
                 Cards.Add(mazo[id]);
             }
-
-          
         }
 
         // Lógica principal: llamar cuando el jugador presiona una carta
@@ -122,7 +122,8 @@ namespace memory_game.Logic
             }
             else
             {
-                // No coinciden = bloquear hasta que el Form resuelva el delay
+                // No coinciden
+                Mistakes++;
                 _waitingForFlip = true;
                 PendingMismatch = (_firstCard, second);
                 _firstCard = null;

@@ -35,6 +35,7 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblMoves = new System.Windows.Forms.Label();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.lblMistakes = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblMistakes);
             this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.lblPairs);
             this.panel1.Controls.Add(this.lblTimer);
@@ -79,7 +81,7 @@
             // lblPairs
             // 
             this.lblPairs.AutoSize = true;
-            this.lblPairs.Location = new System.Drawing.Point(70, 58);
+            this.lblPairs.Location = new System.Drawing.Point(35, 58);
             this.lblPairs.Name = "lblPairs";
             this.lblPairs.Size = new System.Drawing.Size(62, 13);
             this.lblPairs.TabIndex = 3;
@@ -117,6 +119,15 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(464, 555);
             this.tableLayoutPanel.TabIndex = 2;
             // 
+            // lblMistakes
+            // 
+            this.lblMistakes.AutoSize = true;
+            this.lblMistakes.Location = new System.Drawing.Point(126, 58);
+            this.lblMistakes.Name = "lblMistakes";
+            this.lblMistakes.Size = new System.Drawing.Size(61, 13);
+            this.lblMistakes.TabIndex = 5;
+            this.lblMistakes.Text = "Mistakes: 0";
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,5 +154,6 @@
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
+        private System.Windows.Forms.Label lblMistakes;
     }
 }
