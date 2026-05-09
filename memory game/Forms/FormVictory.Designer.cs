@@ -58,7 +58,7 @@
             this.listBoxScores.Location = new System.Drawing.Point(3, 3);
             this.listBoxScores.Name = "listBoxScores";
             this.listBoxScores.ScrollAlwaysVisible = true;
-            this.listBoxScores.Size = new System.Drawing.Size(155, 121);
+            this.listBoxScores.Size = new System.Drawing.Size(183, 160);
             this.listBoxScores.TabIndex = 1;
             // 
             // btnPlayAgain
@@ -69,6 +69,7 @@
             this.btnPlayAgain.TabIndex = 2;
             this.btnPlayAgain.Text = "Play Again";
             this.btnPlayAgain.UseVisualStyleBackColor = true;
+            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // btnExit
             // 

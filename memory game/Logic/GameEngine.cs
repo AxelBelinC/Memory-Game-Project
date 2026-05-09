@@ -21,6 +21,7 @@ namespace memory_game.Logic
     {
         public int Id { get; set; }  // Índice único (0 a N-1)
         public int PairValue { get; set; }  // Valor compartido con su par
+        public int Side { get; set; } // 0 = ImagenA | 1 = ImagenB
         public bool IsFlipped { get; set; } = false;
         public bool IsMatched { get; set; } = false;
     }
@@ -31,6 +32,7 @@ namespace memory_game.Logic
         public List<Card> Cards { get; private set; }
         public int Moves { get; private set; }
         public int MatchesFound { get; private set; }
+        public int Mistakes { get; private set; }
         public int TotalPairs { get; private set; }
         public bool IsGameOver => MatchesFound == TotalPairs;
 
@@ -50,33 +52,42 @@ namespace memory_game.Logic
             }
         }
 
-        // Inicialización: barajea y coloca las cartas
+        // Inicialización: barajea y coloca cartas
         public void Initialize(Difficulty difficulty)
         {
             var (rows, cols) = GetGridSize(difficulty);
             TotalPairs = (rows * cols) / 2;
             Moves = 0;
+            Mistakes = 0;
             MatchesFound = 0;
             _firstCard = null;
             _waitingForFlip = false;
             PendingMismatch = null;
 
-            // Crear lista de valores: cada valor aparece exactamente dos veces
-            var values = new List<int>();
-            for (int i = 0; i < TotalPairs; i++) { values.Add(i); values.Add(i); }
-
-            // Barajar con Fisher-Yates (aleatorio uniforme)
-            var rng = new Random();
-            for (int i = values.Count - 1; i > 0; i--)
+            var mazo = new List<Card>();
+            for (int i = 0; i < TotalPairs; i++)
             {
-                int j = rng.Next(i + 1);
-                int tmp = values[i]; values[i] = values[j]; values[j] = tmp;
+                mazo.Add(new Card { PairValue = i, Side = 0}); //Carta 1: Imagen tipo A
+                mazo.Add(new Card { PairValue = i, Side = 1}); //Carta 2: Imagen tipo B
             }
 
-            // Construir la lista de cartas
+            // Barajar mazo (algoritmo Fisher-Yates):
+            var rng = new Random();
+            for (int i = mazo.Count - 1; i > 0; i--)
+            {
+                int j = rng.Next(i + 1);
+                var tmp = mazo[i];
+                mazo[i] = mazo[j];
+                mazo[j] = tmp;
+            }
+
+            //Asigna ID's finales y guarda en lista oficial
             Cards = new List<Card>();
-            for (int id = 0; id < values.Count; id++)
-                Cards.Add(new Card { Id = id, PairValue = values[id] });
+            for (int id = 0; id < mazo.Count; id++)
+            {
+                mazo[id].Id = id; // Posición final en tablero
+                Cards.Add(mazo[id]);
+            }
         }
 
         // Lógica principal: llamar cuando el jugador presiona una carta
@@ -111,7 +122,8 @@ namespace memory_game.Logic
             }
             else
             {
-                // No coinciden = bloquear hasta que el Form resuelva el delay
+                // No coinciden
+                Mistakes++;
                 _waitingForFlip = true;
                 PendingMismatch = (_firstCard, second);
                 _firstCard = null;

@@ -11,6 +11,7 @@ namespace memory_game.Logic
         public string PlayerName { get; set; }
         public string Difficulty { get; set; }
         public int Moves { get; set; }
+        public int Mistakes { get; set; }
         public int Seconds { get; set; }
         public int Accuracy { get; set; }
         public DateTime Date { get; set; }

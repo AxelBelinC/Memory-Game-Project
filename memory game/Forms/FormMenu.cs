@@ -51,7 +51,9 @@ namespace memory_game.Forms
             }
 
             string nombre = txtPlayerName.Text.Trim();
-            var juego = new FormGame(nombre, dificultad);
+            int temaElegido = cmbTheme.SelectedIndex;
+
+            var juego = new FormGame(nombre, dificultad, temaElegido);
             juego.OnReturnToMenu += () => this.Show();
 
             this.Hide();
@@ -67,11 +69,6 @@ namespace memory_game.Forms
                 this.Width = targetWidth;
             }
             this.ResumeLayout();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
