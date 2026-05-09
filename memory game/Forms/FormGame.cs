@@ -91,15 +91,33 @@ namespace memory_game.Forms
             if (_themeIndex == 0) // Química
             {
                 _imagenesA = new Image[] {
-                    //Properties.Resources.celula_animal,
-                    //Properties.Resources.mitocondria,
-                    // hasta 12 elementos
+                    Properties.Resources.A_Aluminio,
+                    Properties.Resources.A_Sodio,
+                    Properties.Resources.A_Calcio,
+                    Properties.Resources.A_Carbono,
+                    Properties.Resources.A_Cobre,
+                    Properties.Resources.A_Helio,
+                    Properties.Resources.A_Hidrogeno,
+                    Properties.Resources.A_Hierro,
+                    Properties.Resources.A_Litio,
+                    Properties.Resources.A_Neon,
+                    Properties.Resources.A_Oro,
+                    Properties.Resources.A_Oxigeno,
                 };
 
                 _imagenesB = new Image[] {
-                    //Properties.Resources.def_celula_animal,
-                    //Properties.Resources.def_mitocondria,
-                    // hasta 12 en el mismo orden con el grupo de imagenes A
+                    Properties.Resources.B_Aluminio,
+                    Properties.Resources.B_Sodio,
+                    Properties.Resources.B_Calcio,
+                    Properties.Resources.B_Carbono,
+                    Properties.Resources.B_Cobre,
+                    Properties.Resources.B_Helio,
+                    Properties.Resources.B_Hidrogeno,
+                    Properties.Resources.B_Hierro,
+                    Properties.Resources.B_Litio,
+                    Properties.Resources.B_Neon,
+                    Properties.Resources.B_Oro,
+                    Properties.Resources.B_Oxigeno,
                 };
             }
             else if (_themeIndex == 1) //Biología
@@ -188,7 +206,7 @@ namespace memory_game.Forms
             //Ajustando diseño de cartas
             btn.BackgroundImageLayout = ImageLayout.Zoom;
             btn.Text = "";
-            btn.BackColor = Color.WhiteSmoke;
+            btn.BackColor = Color.White;
         }
 
         private void MarcarEmparejadas()
@@ -218,7 +236,7 @@ namespace memory_game.Forms
                 }
                 else if (card.IsFlipped)
                 {
-                    btn.BackColor = Color.WhiteSmoke;
+                    btn.BackColor = Color.White;
                 }
                 else
                 {

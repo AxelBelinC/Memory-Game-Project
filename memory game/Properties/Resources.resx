@@ -127,4 +127,76 @@
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="A_Aluminio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Aluminio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Aluminio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Aluminio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Calcio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Calcio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Calcio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Calcio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Carbono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Carbono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Carbono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Carbono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Cobre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Cobre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Cobre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Cobre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Helio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Helio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Helio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Helio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Hidrogeno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Hidrogeno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Hidrogeno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Hidrogeno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Hierro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Hierro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Hierro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Hierro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Litio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Litio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Litio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Litio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Neon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Neon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Neon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Neon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Oro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Oro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Oro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Oro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Oxigeno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Oxigeno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Oxigeno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Oxigeno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_Sodio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_Sodio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="B_Sodio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B_Sodio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
