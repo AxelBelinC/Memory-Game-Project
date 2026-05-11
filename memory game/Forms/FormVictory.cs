@@ -64,13 +64,23 @@ namespace memory_game.Forms
 
         private void FormVictory_Resize(object sender, EventArgs e)
         {
-            this.SuspendLayout();
-            int targetWidth = (this.Height * 4) / 3;
-            if (this.Width != targetWidth)
+            if (this.WindowState == FormWindowState.Normal)
             {
-                this.Width = targetWidth;
+                this.SuspendLayout();
+                int targetWidth = (this.Height * 4) / 3;
+
+                if (this.Width != targetWidth)
+                {
+                    this.Width = targetWidth;
+                }
+
+                this.ResumeLayout();
             }
-            this.ResumeLayout();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

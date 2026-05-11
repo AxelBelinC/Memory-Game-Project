@@ -28,9 +28,11 @@ namespace memory_game.Forms
         private void ConfigurarComboTemas()
         {
             cmbTheme.Items.Clear();
-            cmbTheme.Items.Add("Chemistry");
-            cmbTheme.Items.Add("Biology");
             cmbTheme.Items.Add("Math");
+            cmbTheme.Items.Add("Chemistry");
+            cmbTheme.Items.Add("Anatomy");
+            cmbTheme.Items.Add("English");
+            cmbTheme.Items.Add("Geography");
             cmbTheme.SelectedIndex = 0;
         }
 
@@ -62,13 +64,18 @@ namespace memory_game.Forms
 
         private void FormMenu_Resize(object sender, EventArgs e)
         {
-            this.SuspendLayout();
-            int targetWidth = (this.Height * 4) / 3;
-            if (this.Width != targetWidth)
+            if (this.WindowState == FormWindowState.Normal)
             {
-                this.Width = targetWidth;
+                this.SuspendLayout();
+                int targetWidth = (this.Height * 4) / 3;
+
+                if (this.Width != targetWidth)
+                {
+                    this.Width = targetWidth;
+                }
+
+                this.ResumeLayout();
             }
-            this.ResumeLayout();
         }
     }
 }

@@ -103,58 +103,164 @@ namespace memory_game.Forms
             }
         }
 
-        private void CargarTema() // Configurando imágenes
+        private void CargarTema()
         {
-            if (_themeIndex == 0) // Química
+            if (_themeIndex == 0)
             {
-                _imagenesA = new Image[] {
-                    Properties.Resources.A_Aluminio,
-                    Properties.Resources.A_Sodio,
-                    Properties.Resources.A_Calcio,
-                    Properties.Resources.A_Carbono,
-                    Properties.Resources.A_Cobre,
-                    Properties.Resources.A_Helio,
-                    Properties.Resources.A_Hidrogeno,
-                    Properties.Resources.A_Hierro,
-                    Properties.Resources.A_Litio,
-                    Properties.Resources.A_Neon,
-                    Properties.Resources.A_Oro,
-                    Properties.Resources.A_Oxigeno,
+                _imagenesA = new Image[]{
+                    Properties.Resources.Math_1_A,
+                    Properties.Resources.Math_2_A,
+                    Properties.Resources.Math_3_A,
+                    Properties.Resources.Math_4_A,
+                    Properties.Resources.Math_5_A,
+                    Properties.Resources.Math_6_A,
+                    Properties.Resources.Math_7_A,
+                    Properties.Resources.Math_8_A,
+                    Properties.Resources.Math_9_A,
+                    Properties.Resources.Math_10_A,
+                    Properties.Resources.Math_11_A,
+                    Properties.Resources.Math_12_A,
                 };
-
-                _imagenesB = new Image[] {
-                    Properties.Resources.B_Aluminio,
-                    Properties.Resources.B_Sodio,
-                    Properties.Resources.B_Calcio,
-                    Properties.Resources.B_Carbono,
-                    Properties.Resources.B_Cobre,
-                    Properties.Resources.B_Helio,
-                    Properties.Resources.B_Hidrogeno,
-                    Properties.Resources.B_Hierro,
-                    Properties.Resources.B_Litio,
-                    Properties.Resources.B_Neon,
-                    Properties.Resources.B_Oro,
-                    Properties.Resources.B_Oxigeno,
+                _imagenesB = new Image[]{
+                    Properties.Resources.Math_1_B,
+                    Properties.Resources.Math_2_B,
+                    Properties.Resources.Math_3_B,
+                    Properties.Resources.Math_4_B,
+                    Properties.Resources.Math_5_B,
+                    Properties.Resources.Math_6_B,
+                    Properties.Resources.Math_7_B,
+                    Properties.Resources.Math_8_B,
+                    Properties.Resources.Math_9_B,
+                    Properties.Resources.Math_10_B,
+                    Properties.Resources.Math_11_B,
+                    Properties.Resources.Math_12_B,
                 };
             }
-            else if (_themeIndex == 1) //Biología
+            else if (_themeIndex == 1)
             {
-                _imagenesA = new Image[] {
-
+                _imagenesA = new Image[]{
+                    Properties.Resources.Chemistry_Aluminum_A,
+                    Properties.Resources.Chemistry_Calcium_A,
+                    Properties.Resources.Chemistry_Carbon_A,
+                    Properties.Resources.Chemistry_Copper_A,
+                    Properties.Resources.Chemistry_Gold_A,
+                    Properties.Resources.Chemistry_Helium_A,
+                    Properties.Resources.Chemistry_Hydrogen_A,
+                    Properties.Resources.Chemistry_Iron_A,
+                    Properties.Resources.Chemistry_Lyithium_A,
+                    Properties.Resources.Chemistry_Neon_A,
+                    Properties.Resources.Chemistry_Oxygen_A,
+                    Properties.Resources.Chemistry_Sodium_A,
                 };
-
-                _imagenesB = new Image[] {
-
+                _imagenesB = new Image[]{
+                    Properties.Resources.Chemistry_Aluminum_B,
+                    Properties.Resources.Chemistry_Calcium_B,
+                    Properties.Resources.Chemistry_Carbon_B,
+                    Properties.Resources.Chemistry_Copper_B,
+                    Properties.Resources.Chemistry_Gold_B,
+                    Properties.Resources.Chemistry_Helium_B,
+                    Properties.Resources.Chemistry_Hydrogen_B,
+                    Properties.Resources.Chemistry_Iron_B,
+                    Properties.Resources.Chemistry_Lyithium_B,
+                    Properties.Resources.Chemistry_Neon_B,
+                    Properties.Resources.Chemistry_Oxygen_B,
+                    Properties.Resources.Chemistry_Sodium_B,
                 };
             }
-            else if (_themeIndex == 2) //Matemáticas básicas
+            else if (_themeIndex == 2)
             {
-                _imagenesA = new Image[] {
-
+                _imagenesA = new Image[]{
+                    Properties.Resources.Anatomy_Brain_A,
+                    Properties.Resources.Anatomy_Ear_A,
+                    Properties.Resources.Anatomy_Eye_A,
+                    Properties.Resources.Anatomy_Femur_A,
+                    Properties.Resources.Anatomy_Foot_A,
+                    Properties.Resources.Anatomy_Hand_A,
+                    Properties.Resources.Anatomy_Heart_A,
+                    Properties.Resources.Anatomy_Lungs_A,
+                    Properties.Resources.Anatomy_Mouth_A,
+                    Properties.Resources.Anatomy_Nose_A,
+                    Properties.Resources.Anatomy_Skull_A,
+                    Properties.Resources.Anatomy_Stomach_A,
                 };
 
-                _imagenesB = new Image[] {
+                _imagenesB = new Image[]{
+                    Properties.Resources.Anatomy_Brain_B,
+                    Properties.Resources.Anatomy_Ear_B,
+                    Properties.Resources.Anatomy_Eye_B,
+                    Properties.Resources.Anatomy_Femur_B,
+                    Properties.Resources.Anatomy_Foot_B,
+                    Properties.Resources.Anatomy_Hand_B,
+                    Properties.Resources.Anatomy_Heart_B,
+                    Properties.Resources.Anatomy_Lungs_B,
+                    Properties.Resources.Anatomy_Mouth_B,
+                    Properties.Resources.Anatomy_Nose_B,
+                    Properties.Resources.Anatomy_Skull_B,
+                    Properties.Resources.Anatomy_Stomach_B,
+                };
+            }
+            else if (_themeIndex == 3)
+            {
+                _imagenesA = new Image[]{
+                    Properties.Resources.English_Be_A,
+                    Properties.Resources.English_Break_A,
+                    Properties.Resources.English_Do_A,
+                    Properties.Resources.English_Eat_A,
+                    Properties.Resources.English_Get_A,
+                    Properties.Resources.English_Go_A,
+                    Properties.Resources.English_Have_A,
+                    Properties.Resources.English_Know_A,
+                    Properties.Resources.English_Make_A,
+                    Properties.Resources.English_Run_A,
+                    Properties.Resources.English_Say_A,
+                    Properties.Resources.English_Take_A,
+                };
 
+                _imagenesB = new Image[]{
+                    Properties.Resources.English_Be_B,
+                    Properties.Resources.English_Break_B,
+                    Properties.Resources.English_Do_B,
+                    Properties.Resources.English_Eat_B,
+                    Properties.Resources.English_Get_B,
+                    Properties.Resources.English_Go_B,
+                    Properties.Resources.English_Have_B,
+                    Properties.Resources.English_Know_B,
+                    Properties.Resources.English_Make_B,
+                    Properties.Resources.English_Run_B,
+                    Properties.Resources.English_Say_B,
+                    Properties.Resources.English_Take_B,
+                };
+            }
+            else if (_themeIndex == 4)
+            {
+                _imagenesA = new Image[]{
+                    Properties.Resources.Geography_Argentina_A,
+                    Properties.Resources.Geography_Australia_A,
+                    Properties.Resources.Geography_Brazil_A,
+                    Properties.Resources.Geography_Canada_A,
+                    Properties.Resources.Geography_China_A,
+                    Properties.Resources.Geography_France_A,
+                    Properties.Resources.Geography_Germany_A,
+                    Properties.Resources.Geography_Mexico_A,
+                    Properties.Resources.Geography_SouthAfrica_A,
+                    Properties.Resources.Geography_Spain_A,
+                    Properties.Resources.Geography_UnitedKingdom_A,
+                    Properties.Resources.Geography_UnitedStates_A,
+                };
+
+                _imagenesB = new Image[]{
+                    Properties.Resources.Geography_Argentina_B,
+                    Properties.Resources.Geography_Australia_B,
+                    Properties.Resources.Geography_Brazil_B,
+                    Properties.Resources.Geography_Canada_B,
+                    Properties.Resources.Geography_China_B,
+                    Properties.Resources.Geography_France_B,
+                    Properties.Resources.Geography_Germany_B,
+                    Properties.Resources.Geography_Mexico_B,
+                    Properties.Resources.Geography_SouthAfrica_B,
+                    Properties.Resources.Geography_Spain_B,
+                    Properties.Resources.Geography_UnitedKingdom_B,
+                    Properties.Resources.Geography_UnitedStates_B,
                 };
             }
         }
@@ -312,6 +418,7 @@ namespace memory_game.Forms
                 this.Close();
                 OnReturnToMenu?.Invoke();
             };
+            this.Close();
             victoria.Show();
         }
 
@@ -354,13 +461,18 @@ namespace memory_game.Forms
 
         private void FormGame_Resize(object sender, EventArgs e)
         {
-            this.SuspendLayout();
-            int targetWidth = (this.Height * 4) / 3;
-            if (this.Width != targetWidth)
+            if (this.WindowState == FormWindowState.Normal)
             {
-                this.Width = targetWidth;
+                this.SuspendLayout();
+                int targetWidth = (this.Height * 4) / 3;
+
+                if (this.Width != targetWidth)
+                {
+                    this.Width = targetWidth;
+                }
+
+                this.ResumeLayout();
             }
-            this.ResumeLayout();
         }
     }
 }
