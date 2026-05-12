@@ -18,6 +18,8 @@ namespace memory_game.Forms
         private readonly int _themeIndex;
         private Image[] _imagenesA;
         private Image[] _imagenesB;
+        private Image Theme_Back;
+        private Image Theme_Solved;
 
         // Variables para el modo "Contra la máquina"
         private readonly bool _contraMaquina;
@@ -111,14 +113,18 @@ namespace memory_game.Forms
                 var btn = new Button
                 {
                     Tag = i,
-                    Text = "?",
-                    Font = new Font("Segoe UI Emoji", 18, FontStyle.Bold),
                     Dock = DockStyle.Fill,
-                    Margin = new Padding(4),
-                    BackColor = Color.SteelBlue,
-                    ForeColor = Color.White,
-                    FlatStyle = FlatStyle.Flat
+                    Margin = new Padding(5),
+                    FlatStyle = FlatStyle.Flat,
+                    BackgroundImage = Theme_Back,
+                    BackgroundImageLayout = ImageLayout.Zoom,
+                    Cursor = Cursors.Hand,
+                    BackColor = Color.White
                 };
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.MouseDownBackColor = btn.BackColor;
+                btn.FlatAppearance.MouseOverBackColor = btn.BackColor;
+
                 btn.Click += CartaButton_Click;
                 _cardButtons[i] = btn;
                 tableLayoutPanel.Controls.Add(btn, i % cols, i / cols);
@@ -129,6 +135,8 @@ namespace memory_game.Forms
         {
             if (_themeIndex == 0)
             {
+                Theme_Back = Properties.Resources.Math_Back;
+                Theme_Solved = Properties.Resources.Math_Solved;
                 _imagenesA = new Image[]{
                     Properties.Resources.Math_1_A,
                     Properties.Resources.Math_2_A,
@@ -160,6 +168,8 @@ namespace memory_game.Forms
             }
             else if (_themeIndex == 1)
             {
+                Theme_Back = Properties.Resources.Chemistry_Back;
+                Theme_Solved = Properties.Resources.Chemistry_Solved;
                 _imagenesA = new Image[]{
                     Properties.Resources.Chemistry_Aluminum_A,
                     Properties.Resources.Chemistry_Calcium_A,
@@ -191,6 +201,8 @@ namespace memory_game.Forms
             }
             else if (_themeIndex == 2)
             {
+                Theme_Back = Properties.Resources.Anatomy_Back;
+                Theme_Solved = Properties.Resources.Anatomy_Solved;
                 _imagenesA = new Image[]{
                     Properties.Resources.Anatomy_Brain_A,
                     Properties.Resources.Anatomy_Ear_A,
@@ -223,6 +235,8 @@ namespace memory_game.Forms
             }
             else if (_themeIndex == 3)
             {
+                Theme_Back = Properties.Resources.English_Back;
+                Theme_Solved = Properties.Resources.English_Solved;
                 _imagenesA = new Image[]{
                     Properties.Resources.English_Be_A,
                     Properties.Resources.English_Break_A,
@@ -255,6 +269,8 @@ namespace memory_game.Forms
             }
             else if (_themeIndex == 4)
             {
+                Theme_Back = Properties.Resources.Geography_Back;
+                Theme_Solved = Properties.Resources.Geography_Solved;
                 _imagenesA = new Image[]{
                     Properties.Resources.Geography_Argentina_A,
                     Properties.Resources.Geography_Australia_A,
@@ -422,7 +438,8 @@ namespace memory_game.Forms
             {
                 if (card.IsMatched)
                 {
-                    _cardButtons[card.Id].BackColor = Color.MediumSeaGreen;
+
+                    _cardButtons[card.Id].BackgroundImage = Theme_Solved;
                     _cardButtons[card.Id].ForeColor = Color.White;
                     _cardButtons[card.Id].Enabled = false;
                 }
@@ -436,9 +453,8 @@ namespace memory_game.Forms
                 var btn = _cardButtons[card.Id];
                 if (card.IsMatched)
                 {
-                    btn.BackgroundImage = (card.Side == 0) ? _imagenesA[card.PairValue] : _imagenesB[card.PairValue];
+                    btn.BackgroundImage = Theme_Solved;
                     btn.BackgroundImageLayout = ImageLayout.Zoom;
-                    btn.BackColor = Color.MediumSeaGreen;
                     btn.Enabled = false;
                 }
                 else if (card.IsFlipped)
@@ -453,15 +469,12 @@ namespace memory_game.Forms
                         btn.BackgroundImage = (card.Side == 0) ? _imagenesA[card.PairValue] : _imagenesB[card.PairValue];
                         btn.BackgroundImageLayout = ImageLayout.Zoom;
                         btn.Text = "";
-                        btn.BackColor = Color.LightCoral;
                         btn.Enabled = !_bloquearClicks; 
                     }
                     else
                     {
                         // MODO NORMAL: Todas volteadas
-                        btn.BackgroundImage = null;
-                        btn.Text = "?";
-                        btn.BackColor = Color.SteelBlue;
+                        btn.BackgroundImage = Theme_Back;
                         btn.ForeColor = Color.White;
                         btn.Enabled = true;
                     }
@@ -695,6 +708,44 @@ namespace memory_game.Forms
 
                 this.ResumeLayout();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ActualizarVistaCartas(bool mostrarOriginales)
+        {
+            foreach (var card in _engine.Cards)
+            {
+                var btn = _cardButtons[card.Id];
+
+                if (card.IsMatched)
+                {
+                    if (mostrarOriginales)
+                    {
+                        btn.BackgroundImage = (card.Side == 0)
+                            ? _imagenesA[card.PairValue]
+                            : _imagenesB[card.PairValue];
+                    }
+                    else
+                    {
+                        btn.BackgroundImage = Theme_Solved;
+                    }
+                }
+                btn.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+        }
+
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ActualizarVistaCartas(true);
+        }
+
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            ActualizarVistaCartas(false);
         }
     }
 }

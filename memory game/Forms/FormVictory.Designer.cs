@@ -74,6 +74,7 @@
             this.btnPlayAgain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPlayAgain.BackgroundImage = global::memory_game.Properties.Resources.imgPlayAgain;
             this.btnPlayAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlayAgain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayAgain.ForeColor = System.Drawing.Color.White;
             this.btnPlayAgain.Location = new System.Drawing.Point(143, 28);
@@ -89,6 +90,7 @@
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.BackgroundImage = global::memory_game.Properties.Resources.imgBackToMenu;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(507, 28);

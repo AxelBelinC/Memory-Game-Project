@@ -31,10 +31,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnStart = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkVsCPU = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.chkVsCPU = new System.Windows.Forms.CheckBox();
             this.cmbTheme = new System.Windows.Forms.ComboBox();
             this.cmbDifficulty = new System.Windows.Forms.ComboBox();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
@@ -53,16 +53,16 @@
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnStart, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnStart, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 561);
@@ -78,7 +78,7 @@
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.ForeColor = System.Drawing.Color.White;
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnStart.Location = new System.Drawing.Point(274, 451);
+            this.btnStart.Location = new System.Drawing.Point(274, 450);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(235, 70);
             this.btnStart.TabIndex = 5;
@@ -89,17 +89,31 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.chkVsCPU);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.chkVsCPU);
             this.panel1.Controls.Add(this.cmbTheme);
             this.panel1.Controls.Add(this.cmbDifficulty);
             this.panel1.Controls.Add(this.txtPlayerName);
-            this.panel1.Location = new System.Drawing.Point(200, 204);
+            this.panel1.Location = new System.Drawing.Point(247, 175);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 236);
+            this.panel1.Size = new System.Drawing.Size(290, 252);
             this.panel1.TabIndex = 8;
+            // 
+            // chkVsCPU
+            // 
+            this.chkVsCPU.AutoSize = true;
+            this.chkVsCPU.BackColor = System.Drawing.Color.Transparent;
+            this.chkVsCPU.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkVsCPU.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkVsCPU.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.chkVsCPU.Location = new System.Drawing.Point(45, 213);
+            this.chkVsCPU.Name = "chkVsCPU";
+            this.chkVsCPU.Size = new System.Drawing.Size(199, 26);
+            this.chkVsCPU.TabIndex = 7;
+            this.chkVsCPU.Text = "Play Against the AI";
+            this.chkVsCPU.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -130,17 +144,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            // 
-            // chkVsCPU
-            // 
-            this.chkVsCPU.AutoSize = true;
-            this.chkVsCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkVsCPU.Location = new System.Drawing.Point(145, 192);
-            this.chkVsCPU.Name = "chkVsCPU";
-            this.chkVsCPU.Size = new System.Drawing.Size(184, 28);
-            this.chkVsCPU.TabIndex = 7;
-            this.chkVsCPU.Text = "Play Against the AI";
-            this.chkVsCPU.UseVisualStyleBackColor = true;
             // 
             // cmbTheme
             // 
@@ -182,9 +185,9 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::memory_game.Properties.Resources.imgLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(273, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(255, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;

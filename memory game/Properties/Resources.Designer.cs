@@ -1133,6 +1133,16 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgEye {
+            get {
+                object obj = ResourceManager.GetObject("imgEye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgFondo {
             get {
                 object obj = ResourceManager.GetObject("imgFondo", resourceCulture);
