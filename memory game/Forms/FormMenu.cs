@@ -54,8 +54,9 @@ namespace memory_game.Forms
 
             string nombre = txtPlayerName.Text.Trim();
             int temaElegido = cmbTheme.SelectedIndex;
+            bool jugarContraIA = chkVsCPU.Checked;
 
-            var juego = new FormGame(nombre, dificultad, temaElegido);
+            var juego = new FormGame(nombre, dificultad, temaElegido, jugarContraIA);
             juego.OnReturnToMenu += () => this.Show();
 
             this.Hide();

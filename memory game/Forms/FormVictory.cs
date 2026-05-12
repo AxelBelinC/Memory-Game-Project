@@ -23,10 +23,10 @@ namespace memory_game.Forms
         {
             lblStats.Text =
                 $"🎉 ¡Congratulations, {entry.PlayerName}!\n\n" +
-                $"⏱  Time:        {entry.Seconds / 60:00}:{entry.Seconds % 60:00}\n" +
-                $"🔢  Movements:   {entry.Moves}\n" +
-                $"❌  Mistakes:        {entry.Mistakes}\n" +
-                $"🎯  Precision:     {entry.Accuracy}%";
+                $"⏱  Time:             {entry.Seconds / 60:00}:{entry.Seconds % 60:00}\n\r" +
+                $"🔢  Movements:   {entry.Moves}\n\r" +
+                $"❌  Mistakes:        {entry.Mistakes}\n\r" +
+                $"🎯  Precision:      {entry.Accuracy}%";
         }
 
         private void MostrarLeaderboard(string difficulty)

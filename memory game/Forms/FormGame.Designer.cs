@@ -75,11 +75,12 @@
             // lblMistakes
             // 
             this.lblMistakes.AutoSize = true;
-            this.lblMistakes.Location = new System.Drawing.Point(62, 181);
+            this.lblMistakes.Location = new System.Drawing.Point(61, 170);
             this.lblMistakes.Name = "lblMistakes";
             this.lblMistakes.Size = new System.Drawing.Size(61, 13);
             this.lblMistakes.TabIndex = 5;
             this.lblMistakes.Text = "Mistakes: 0";
+            this.lblMistakes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnReset
             // 
@@ -97,7 +98,7 @@
             // lblPairs
             // 
             this.lblPairs.AutoSize = true;
-            this.lblPairs.Location = new System.Drawing.Point(61, 148);
+            this.lblPairs.Location = new System.Drawing.Point(61, 213);
             this.lblPairs.Name = "lblPairs";
             this.lblPairs.Size = new System.Drawing.Size(62, 13);
             this.lblPairs.TabIndex = 3;
@@ -115,11 +116,12 @@
             // lblMoves
             // 
             this.lblMoves.AutoSize = true;
-            this.lblMoves.Location = new System.Drawing.Point(49, 110);
+            this.lblMoves.Location = new System.Drawing.Point(49, 129);
             this.lblMoves.Name = "lblMoves";
             this.lblMoves.Size = new System.Drawing.Size(74, 13);
             this.lblMoves.TabIndex = 1;
             this.lblMoves.Text = "Movements: 0";
+            this.lblMoves.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel
             // 

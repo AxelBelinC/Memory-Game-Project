@@ -31,6 +31,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnStart = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkVsCPU = new System.Windows.Forms.CheckBox();
             this.cmbTheme = new System.Windows.Forms.ComboBox();
             this.lblTheme = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -85,16 +86,28 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.chkVsCPU);
             this.panel1.Controls.Add(this.cmbTheme);
             this.panel1.Controls.Add(this.lblTheme);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblDiff);
             this.panel1.Controls.Add(this.cmbDifficulty);
             this.panel1.Controls.Add(this.txtPlayerName);
-            this.panel1.Location = new System.Drawing.Point(250, 203);
+            this.panel1.Location = new System.Drawing.Point(250, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 153);
+            this.panel1.Size = new System.Drawing.Size(284, 184);
             this.panel1.TabIndex = 8;
+            // 
+            // chkVsCPU
+            // 
+            this.chkVsCPU.AutoSize = true;
+            this.chkVsCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkVsCPU.Location = new System.Drawing.Point(45, 156);
+            this.chkVsCPU.Name = "chkVsCPU";
+            this.chkVsCPU.Size = new System.Drawing.Size(184, 28);
+            this.chkVsCPU.TabIndex = 7;
+            this.chkVsCPU.Text = "Play Against the AI";
+            this.chkVsCPU.UseVisualStyleBackColor = true;
             // 
             // cmbTheme
             // 
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTheme;
         private System.Windows.Forms.ComboBox cmbTheme;
+        private System.Windows.Forms.CheckBox chkVsCPU;
     }
 }

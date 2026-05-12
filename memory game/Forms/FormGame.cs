@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using memory_game.Logic;
 
@@ -17,7 +19,24 @@ namespace memory_game.Forms
         private Image[] _imagenesA;
         private Image[] _imagenesB;
 
+        // Variables para el modo "Contra la máquina"
+        private readonly bool _contraMaquina;
+        private bool _IsPlayerTurn = true;
+        private int _puntosJugador = 0;
+        private int _puntosIA = 0;
+        private int _fallosJugador = 0;
+        private int _fallosIA = 0;
+
+        // Variables para modificadores en el juego
+        private int _rachaJugador = 0;
+        private bool _panicoActivado = false;
+        private int _vecesPanico = 0;
+        private const int MAX_PANICO = 2;
+        private bool _bloquearClicks = false;
+        private int _segundoAnterior;
+
         // Timers
+        private System.Windows.Forms.Timer _panicoTimer;
         private System.Windows.Forms.Timer _clockTimer;
         private System.Windows.Forms.Timer _mismatchTimer;
         private int _remainingSeconds = 0;
@@ -26,13 +45,15 @@ namespace memory_game.Forms
         // Botones del grid
         private Button[] _cardButtons;
 
+
         // Constructor
-        public FormGame(string playerName, Difficulty difficulty, int themeIndex)
+        public FormGame(string playerName, Difficulty difficulty, int themeIndex, bool contraMaquina)
         {
             InitializeComponent();
             _playerName = playerName;
             _difficulty = difficulty;
             _themeIndex = themeIndex;
+            _contraMaquina = contraMaquina;
             CargarTema();
             IniciarJuego();
             this.DoubleBuffered = true;
@@ -57,6 +78,7 @@ namespace memory_game.Forms
                     break;
             }
             _remainingSeconds = _initialSeconds;
+            _segundoAnterior = _remainingSeconds;
 
             _engine.Initialize(_difficulty);
             CrearGrid();
@@ -267,60 +289,113 @@ namespace memory_game.Forms
 
         private void CrearTimers()
         {
-            // Reloj
+            // Timer principal
             _clockTimer = new System.Windows.Forms.Timer { Interval = 1000 }; // cambia cada segundo
             _clockTimer.Tick += (s, e) => 
             {
                 _remainingSeconds--;
                 ActualizarHUD();
 
+                // Modo pánico 
+                bool estadoPanicoAnterior = _panicoActivado;
+                if (_IsPlayerTurn && _segundoAnterior > 10 &&  _remainingSeconds <= 10 && !_panicoActivado && _vecesPanico < MAX_PANICO)
+                {
+                    _panicoActivado = true;
+                    _bloquearClicks = true;
+
+                    _vecesPanico++;
+
+                    RefrescarTodasLasCartas();
+
+                    _panicoTimer.Start();
+                }
+
+                // Si acabas de entrar o salir del pánico, refrescamos las cartas
+                if (estadoPanicoAnterior != _panicoActivado)
+                {
+                    RefrescarTodasLasCartas();
+                }
+
+                //Derrota por tiempo
                 if (_remainingSeconds <= 0)
                 {
-                    MostrarDerrota();
+                    MostrarDerrota("¡Time's over! You have lost.");
                 }
+
+                _segundoAnterior = _remainingSeconds;
             };
             _clockTimer.Start();
 
+            // Timer para cartas incorrectas
             _mismatchTimer = new System.Windows.Forms.Timer { Interval = 800 };
             _mismatchTimer.Tick += (s, e) =>
             {
                 _mismatchTimer.Stop();
                 _engine.ResolveMismatch();
                 RefrescarTodasLasCartas();
+
+                // Cambio de turno (IA/humano)
+                if (_contraMaquina)
+                {
+                    _IsPlayerTurn = !_IsPlayerTurn; //cambiamos turno
+                    ActualizarHUD();
+
+                    if (!_IsPlayerTurn) TurnoIA();
+                }
+            };
+
+            _panicoTimer = new System.Windows.Forms.Timer();
+            // duración del modo según dificultad
+            switch (_difficulty)
+            {
+                case Difficulty.Easy:
+                    _panicoTimer.Interval = 4000;
+                    break;
+
+                case Difficulty.Medium:
+                    _panicoTimer.Interval = 3000;
+                    break;
+
+                case Difficulty.Hard:
+                    _panicoTimer.Interval = 2000;
+                    break;
+
+                default:
+                    _panicoTimer.Interval = 3000;
+                    break;
+            }
+
+            _panicoTimer.Tick += async(s, e) =>
+            {
+                _panicoTimer.Stop();
+
+                _panicoActivado = false;
+                // desbloquear clicks SOLO si es turno humano
+                if (_IsPlayerTurn)
+                {
+                    _bloquearClicks = false;
+                }
+
+                RefrescarTodasLasCartas();
+
+                // REANUDAR IA SI ERA SU TURNO
+                if (_contraMaquina && !_IsPlayerTurn)
+                {
+                    await Task.Delay(500);
+
+                    TurnoIA();
+                }
             };
         }
 
-        private void CartaButton_Click(object sender, EventArgs e)
+        private async void CartaButton_Click(object sender, EventArgs e)
         {
+            if (_bloquearClicks) return; // función modo pánico
+
+            if (_contraMaquina && !_IsPlayerTurn) return; //Bloqueo de seguridad
+
             int cardId = (int)((Button)sender).Tag;
-            var result = _engine.TryFlip(cardId);
-
-            switch (result)
-            {
-                case FlipResult.FirstCard:
-                    MostrarCarta(cardId);
-                    break;
-
-                case FlipResult.Match:
-                    MostrarCarta(cardId);
-                    MarcarEmparejadas();
-                    ActualizarHUD();
-                    break;
-
-                case FlipResult.Mismatch:
-                    MostrarCarta(cardId);
-                    ActualizarHUD();
-                    _mismatchTimer.Start();
-                    break;
-
-                case FlipResult.Victory:
-                    MostrarCarta(cardId);
-                    _clockTimer.Stop();
-                    ActualizarHUD();
-                    MostrarVictoria();
-                    break;
-                
-            }
+            ProcesarVolteo(cardId);
         }
 
         private void MostrarCarta(int cardId)
@@ -372,33 +447,180 @@ namespace memory_game.Forms
                 }
                 else
                 {
-                    btn.BackgroundImage = null;
-                    btn.Text = "?";
-                    btn.BackColor = Color.SteelBlue;
-                    btn.ForeColor = Color.White;
-                    btn.Enabled = true;
+                    if(_panicoActivado)
+                    {
+                        // MODO PÁNICO: Revelamos la imagen con un fondo rojo
+                        btn.BackgroundImage = (card.Side == 0) ? _imagenesA[card.PairValue] : _imagenesB[card.PairValue];
+                        btn.BackgroundImageLayout = ImageLayout.Zoom;
+                        btn.Text = "";
+                        btn.BackColor = Color.LightCoral;
+                        btn.Enabled = !_bloquearClicks; 
+                    }
+                    else
+                    {
+                        // MODO NORMAL: Todas volteadas
+                        btn.BackgroundImage = null;
+                        btn.Text = "?";
+                        btn.BackColor = Color.SteelBlue;
+                        btn.ForeColor = Color.White;
+                        btn.Enabled = true;
+                    }
                 }
             }
         }
 
+        private async void ProcesarVolteo(int cardId) // Modo contra IA
+        {
+            var result = _engine.TryFlip(cardId);
+
+            switch (result)
+            {
+                case FlipResult.FirstCard:
+                    MostrarCarta(cardId);
+                    break;
+                case FlipResult.Match:
+                    if (_IsPlayerTurn) // asignar punto a ganador
+                    {
+                        if (_contraMaquina)
+                            _puntosJugador++;
+
+                        _rachaJugador++;
+                        _remainingSeconds += (_rachaJugador * 10); // +10s, +20s, +30s
+                    }
+                    else
+                    {
+                        _puntosIA++;
+                    }
+
+                    MostrarCarta(cardId);
+                    MarcarEmparejadas();
+                    ActualizarHUD();
+
+                    // después de estar en pánico y subir a más de 10 segundos, se apaga el modo
+                    if (_panicoActivado && _remainingSeconds > 10)
+                    {
+                        _panicoActivado = false;
+                        RefrescarTodasLasCartas();
+                    }
+
+                    // si acierta juega de nuevo
+                    if (_contraMaquina && !_IsPlayerTurn && !_engine.IsGameOver)
+                    {
+                        await Task.Delay(1000);
+                        TurnoIA();
+                    }
+                    break;
+
+                case FlipResult.Mismatch: // mistake Match
+                    if (_IsPlayerTurn)
+                    {
+                        _rachaJugador = 0;
+
+                        if (_contraMaquina)
+                            _fallosJugador++;
+                    }
+                    else
+                    {
+                        _fallosIA++;
+                    }
+
+                    MostrarCarta(cardId);
+                    ActualizarHUD();
+                    _mismatchTimer.Start();
+                    break;
+                case FlipResult.Victory:
+                    if (_contraMaquina) //asignamos el último punto 
+                    {
+                        if (_IsPlayerTurn) _puntosJugador++;
+                        else _puntosIA++;
+                    }
+                    MostrarCarta(cardId);
+                    MarcarEmparejadas();
+                    _clockTimer.Stop();
+                    ActualizarHUD();
+                    this.Refresh(); //forzar q se muestre el último punto
+                    await Task.Delay(1000);
+                    MostrarVictoria();
+                    break;
+
+            }
+        }
+
+        private async void TurnoIA()
+        {
+            if (_engine.IsGameOver) return;
+
+            if (_panicoActivado) return;
+
+            await Task.Delay(1000);
+
+            if (_panicoActivado) return;
+
+            // verifica cartas disponibles
+            var cartasDisponibles = _engine.Cards.Where(c => !c.IsFlipped && !c.IsMatched).ToList();
+            if (cartasDisponibles.Count == 0) return;
+
+            // IA primera carta
+            int index1 = new Random().Next(cartasDisponibles.Count);
+            int cardId1 = cartasDisponibles[index1].Id;
+            ProcesarVolteo(cardId1);
+
+            await Task.Delay(800);
+
+            // actualiza las cartas disponibles para elegir
+            cartasDisponibles = _engine.Cards.Where(c => !c.IsFlipped && !c.IsMatched).ToList();
+            if (cartasDisponibles.Count == 0) return;
+
+            // IA segunda carta
+            int index2 = new Random().Next(cartasDisponibles.Count);
+            int cardId2 = cartasDisponibles[index2].Id;
+            ProcesarVolteo(cardId2);
+        }
+
         private void ActualizarHUD()
         {
-            lblMoves.Text = $"Movements: {_engine.Moves}";
+            if (_contraMaquina)
+            {
+                string turnoTexto = _IsPlayerTurn ? $"Your turn" : "AI's turn";
+                lblMoves.Text = $"You: {_puntosJugador}  |  AI: {_puntosIA}\n{turnoTexto}";
+                lblMistakes.Text = $"Mistakes:\nYou: {_fallosJugador} | AI: {_fallosIA}";
+            } else
+            {
+                lblMoves.Text = $"Movements: {_engine.Moves}";
+                lblMistakes.Text = $"Mistakes: {_engine.Mistakes}";
+            }
             lblTimer.Text = $"{_remainingSeconds / 60:00}:{_remainingSeconds % 60:00}";
             lblPairs.Text = $"Pairs: {_engine.MatchesFound} / {_engine.TotalPairs}";
-            lblMistakes.Text = $"Mistakes: {_engine.Mistakes}";
         }
 
         private void MostrarVictoria() // Victoria
         {
-            int tiempoTotal = _initialSeconds - _remainingSeconds; // tiempo total de juego
+            if (_contraMaquina)
+            {
+                if (_puntosIA > _puntosJugador)
+                {
+                    MostrarDerrota($"IA wins! The AI got {_puntosIA} pairs and you got {_puntosJugador}.");
+                    return; // El "return" cancela el resto de la función para que no guarde tu puntaje
+                }
+                else if (_puntosIA == _puntosJugador)
+                {
+                    MessageBox.Show("It's a tie!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Si es empate, no cuenta como derrota, pero puedes decidir si quieres que se guarde o regresar al menú:
+                    this.Close();
+                    OnReturnToMenu?.Invoke();
+                    return;
+                }
+            }
+
+            //(funcion mátematica por si se logra combo perfecto)
+            int tiempoTotal = Math.Max(0, _initialSeconds - _remainingSeconds); // tiempo total de juego
 
             var entry = new Logic.ScoreEntry
             {
                 PlayerName = _playerName,
                 Difficulty = _difficulty.ToString(),
                 Moves = _engine.Moves,
-                Mistakes = _engine.Mistakes,
+                Mistakes = _contraMaquina ? _fallosJugador: _engine.Mistakes,
                 Seconds = tiempoTotal,
                 Accuracy = _engine.GetAccuracy(),
                 Date = DateTime.Now
@@ -409,7 +631,7 @@ namespace memory_game.Forms
             victoria.OnPlayAgain += () =>
             {
                 this.Close();
-                var nuevo = new FormGame(_playerName, _difficulty, _themeIndex);
+                var nuevo = new FormGame(_playerName, _difficulty, _themeIndex, _contraMaquina);
                 nuevo.OnReturnToMenu += OnReturnToMenu;
                 nuevo.Show();
             };
@@ -422,7 +644,7 @@ namespace memory_game.Forms
             victoria.Show();
         }
 
-        private void MostrarDerrota() // Derrota
+        private void MostrarDerrota(string cause) // Derrota
         {
             _clockTimer.Stop();
             _mismatchTimer.Stop();
@@ -434,7 +656,7 @@ namespace memory_game.Forms
             }
 
             MessageBox.Show(
-                "¡Time's over! You have lost.",
+                cause,
                 "Game Over",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
