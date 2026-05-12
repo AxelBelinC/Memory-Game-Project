@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace memory_game.Logic
 {
@@ -64,15 +65,29 @@ namespace memory_game.Logic
             _waitingForFlip = false;
             PendingMismatch = null;
 
-            var mazo = new List<Card>();
+            var rng = new Random();
+
+            // lista con los índices del 0 al 11 (12 imagenes por tema)
+            var indicesDisponibles = Enumerable.Range(0, 12).ToList();
+            var indicesSeleccionados = new List<int>();
+
+            // Sacamos al azar la cantidad de pares según dificultad 
             for (int i = 0; i < TotalPairs; i++)
             {
-                mazo.Add(new Card { PairValue = i, Side = 0}); //Carta 1: Imagen tipo A
-                mazo.Add(new Card { PairValue = i, Side = 1}); //Carta 2: Imagen tipo B
+                int rndIndex = rng.Next(indicesDisponibles.Count);
+                indicesSeleccionados.Add(indicesDisponibles[rndIndex]);
+                indicesDisponibles.RemoveAt(rndIndex); // Lo borramos para no repetirlo
             }
 
-            // Barajar mazo (algoritmo Fisher-Yates):
-            var rng = new Random();
+            //Construir mazo con los indices seleccionados al azar
+            var mazo = new List<Card>();
+            foreach (int pairId in indicesSeleccionados)
+            {
+                mazo.Add(new Card { PairValue = pairId, Side = 0}); //Carta 1: Imagen tipo A
+                mazo.Add(new Card { PairValue = pairId, Side = 1}); //Carta 2: Imagen tipo B
+            }
+
+            // Barajar posiciones del mazo (algoritmo Fisher-Yates):
             for (int i = mazo.Count - 1; i > 0; i--)
             {
                 int j = rng.Next(i + 1);

@@ -19,7 +19,7 @@ namespace memory_game.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,9 +63,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Aluminio {
+        internal static System.Drawing.Bitmap Anatomy_Back {
             get {
-                object obj = ResourceManager.GetObject("A_Aluminio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Calcio {
+        internal static System.Drawing.Bitmap Anatomy_Brain_A {
             get {
-                object obj = ResourceManager.GetObject("A_Calcio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Brain_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Carbono {
+        internal static System.Drawing.Bitmap Anatomy_Brain_B {
             get {
-                object obj = ResourceManager.GetObject("A_Carbono", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Brain_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Cobre {
+        internal static System.Drawing.Bitmap Anatomy_Ear_A {
             get {
-                object obj = ResourceManager.GetObject("A_Cobre", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Ear_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Helio {
+        internal static System.Drawing.Bitmap Anatomy_Ear_B {
             get {
-                object obj = ResourceManager.GetObject("A_Helio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Ear_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Hidrogeno {
+        internal static System.Drawing.Bitmap Anatomy_Eye_A {
             get {
-                object obj = ResourceManager.GetObject("A_Hidrogeno", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Eye_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Hierro {
+        internal static System.Drawing.Bitmap Anatomy_Eye_B {
             get {
-                object obj = ResourceManager.GetObject("A_Hierro", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Eye_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Litio {
+        internal static System.Drawing.Bitmap Anatomy_Femur_A {
             get {
-                object obj = ResourceManager.GetObject("A_Litio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Femur_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Neon {
+        internal static System.Drawing.Bitmap Anatomy_Femur_B {
             get {
-                object obj = ResourceManager.GetObject("A_Neon", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Femur_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Oro {
+        internal static System.Drawing.Bitmap Anatomy_Foot_A {
             get {
-                object obj = ResourceManager.GetObject("A_Oro", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Foot_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Oxigeno {
+        internal static System.Drawing.Bitmap Anatomy_Foot_B {
             get {
-                object obj = ResourceManager.GetObject("A_Oxigeno", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Foot_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_Sodio {
+        internal static System.Drawing.Bitmap Anatomy_Hand_A {
             get {
-                object obj = ResourceManager.GetObject("A_Sodio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Hand_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Aluminio {
+        internal static System.Drawing.Bitmap Anatomy_Hand_B {
             get {
-                object obj = ResourceManager.GetObject("B_Aluminio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Hand_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Calcio {
+        internal static System.Drawing.Bitmap Anatomy_Heart_A {
             get {
-                object obj = ResourceManager.GetObject("B_Calcio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Heart_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Carbono {
+        internal static System.Drawing.Bitmap Anatomy_Heart_B {
             get {
-                object obj = ResourceManager.GetObject("B_Carbono", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Heart_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Cobre {
+        internal static System.Drawing.Bitmap Anatomy_Lungs_A {
             get {
-                object obj = ResourceManager.GetObject("B_Cobre", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Lungs_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Helio {
+        internal static System.Drawing.Bitmap Anatomy_Lungs_B {
             get {
-                object obj = ResourceManager.GetObject("B_Helio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Lungs_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Hidrogeno {
+        internal static System.Drawing.Bitmap Anatomy_Mouth_A {
             get {
-                object obj = ResourceManager.GetObject("B_Hidrogeno", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Mouth_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Hierro {
+        internal static System.Drawing.Bitmap Anatomy_Mouth_B {
             get {
-                object obj = ResourceManager.GetObject("B_Hierro", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Mouth_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Litio {
+        internal static System.Drawing.Bitmap Anatomy_Nose_A {
             get {
-                object obj = ResourceManager.GetObject("B_Litio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Nose_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Neon {
+        internal static System.Drawing.Bitmap Anatomy_Nose_B {
             get {
-                object obj = ResourceManager.GetObject("B_Neon", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Nose_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Oro {
+        internal static System.Drawing.Bitmap Anatomy_Skull_A {
             get {
-                object obj = ResourceManager.GetObject("B_Oro", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Skull_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Oxigeno {
+        internal static System.Drawing.Bitmap Anatomy_Skull_B {
             get {
-                object obj = ResourceManager.GetObject("B_Oxigeno", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Skull_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B_Sodio {
+        internal static System.Drawing.Bitmap Anatomy_Solved {
             get {
-                object obj = ResourceManager.GetObject("B_Sodio", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Solved", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +303,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btnStartGame {
+        internal static System.Drawing.Bitmap Anatomy_Stomach_A {
             get {
-                object obj = ResourceManager.GetObject("btnStartGame", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Stomach_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +313,9 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fondo {
+        internal static System.Drawing.Bitmap Anatomy_Stomach_B {
             get {
-                object obj = ResourceManager.GetObject("fondo", resourceCulture);
+                object obj = ResourceManager.GetObject("Anatomy_Stomach_B", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +323,1129 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap Chemistry_Aluminum_A {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("Chemistry_Aluminum_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Aluminum_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Aluminum_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Back {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Calcium_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Calcium_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Calcium_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Calcium_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Carbon_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Carbon_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Carbon_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Carbon_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Copper_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Copper_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Copper_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Copper_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Gold_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Gold_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Gold_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Gold_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Helium_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Helium_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Helium_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Helium_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Hydrogen_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Hydrogen_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Hydrogen_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Hydrogen_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Iron_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Iron_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Iron_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Iron_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Lyithium_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Lyithium_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Lyithium_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Lyithium_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Neon_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Neon_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Neon_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Neon_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Oxygen_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Oxygen_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Oxygen_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Oxygen_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Sodium_A {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Sodium_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Sodium_B {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Sodium_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chemistry_Solved {
+            get {
+                object obj = ResourceManager.GetObject("Chemistry_Solved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Back {
+            get {
+                object obj = ResourceManager.GetObject("English_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Be_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Be_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Be_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Be_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Break_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Break_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Break_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Break_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Do_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Do_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Do_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Do_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Eat_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Eat_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Eat_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Eat_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Get_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Get_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Get_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Get_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Go_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Go_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Go_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Go_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Have_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Have_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Have_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Have_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Know_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Know_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Know_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Know_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Make_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Make_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Make_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Make_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Run_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Run_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Run_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Run_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Say_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Say_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Say_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Say_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Solved {
+            get {
+                object obj = ResourceManager.GetObject("English_Solved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Take_A {
+            get {
+                object obj = ResourceManager.GetObject("English_Take_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Take_B {
+            get {
+                object obj = ResourceManager.GetObject("English_Take_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Argentina_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Argentina_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Argentina_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Argentina_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Australia_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Australia_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Australia_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Australia_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Back {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Brazil_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Brazil_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Brazil_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Brazil_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Canada_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Canada_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Canada_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Canada_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_China_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_China_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_China_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_China_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_France_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_France_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_France_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_France_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Germany_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Germany_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Germany_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Germany_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Mexico_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Mexico_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Mexico_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Mexico_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Solved {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Solved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_SouthAfrica_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_SouthAfrica_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_SouthAfrica_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_SouthAfrica_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Spain_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Spain_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_Spain_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_Spain_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_UnitedKingdom_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_UnitedKingdom_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_UnitedKingdom_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_UnitedKingdom_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_UnitedStates_A {
+            get {
+                object obj = ResourceManager.GetObject("Geography_UnitedStates_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Geography_UnitedStates_B {
+            get {
+                object obj = ResourceManager.GetObject("Geography_UnitedStates_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgBackToMenu {
+            get {
+                object obj = ResourceManager.GetObject("imgBackToMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgBackToMenuGame {
+            get {
+                object obj = ResourceManager.GetObject("imgBackToMenuGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgFondo {
+            get {
+                object obj = ResourceManager.GetObject("imgFondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgGameStats {
+            get {
+                object obj = ResourceManager.GetObject("imgGameStats", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgLeaderboard {
+            get {
+                object obj = ResourceManager.GetObject("imgLeaderboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgLogo {
+            get {
+                object obj = ResourceManager.GetObject("imgLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgName {
+            get {
+                object obj = ResourceManager.GetObject("imgName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgPlayAgain {
+            get {
+                object obj = ResourceManager.GetObject("imgPlayAgain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgStartGame {
+            get {
+                object obj = ResourceManager.GetObject("imgStartGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_1_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_1_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_1_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_1_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_10_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_10_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_10_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_10_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_11_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_11_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_11_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_11_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_12_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_12_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_12_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_12_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_2_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_2_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_2_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_2_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_3_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_3_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_3_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_3_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_4_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_4_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_4_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_4_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_5_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_5_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_5_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_5_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_6_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_6_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_6_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_6_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_7_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_7_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_7_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_7_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_8_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_8_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_8_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_8_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_9_A {
+            get {
+                object obj = ResourceManager.GetObject("Math_9_A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_9_B {
+            get {
+                object obj = ResourceManager.GetObject("Math_9_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_Back {
+            get {
+                object obj = ResourceManager.GetObject("Math_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Math_Solved {
+            get {
+                object obj = ResourceManager.GetObject("Math_Solved", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

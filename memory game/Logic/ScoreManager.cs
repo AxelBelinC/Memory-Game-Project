@@ -18,7 +18,7 @@ namespace memory_game.Logic
 
         // Formato para mostrar en ListBox
         public override string ToString() =>
-            $"{PlayerName,-12} | {Difficulty,-6} | {Moves,3} mov | " +
+            $"{PlayerName,-12} | {Moves,3} mov | " +
             $"{Seconds / 60:00}:{Seconds % 60:00} | {Accuracy,3}%";
     }
 

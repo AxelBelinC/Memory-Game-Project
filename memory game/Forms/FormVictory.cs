@@ -23,10 +23,10 @@ namespace memory_game.Forms
         {
             lblStats.Text =
                 $"🎉 ¡Congratulations, {entry.PlayerName}!\n\n" +
-                $"⏱  Time:        {entry.Seconds / 60:00}:{entry.Seconds % 60:00}\n" +
-                $"🔢  Movements:   {entry.Moves}\n" +
-                $"❌  Mistakes:        {entry.Mistakes}\n" +
-                $"🎯  Precision:     {entry.Accuracy}%";
+                $"⏱  Time:             {entry.Seconds / 60:00}:{entry.Seconds % 60:00}\n\r" +
+                $"🔢  Movements:   {entry.Moves}\n\r" +
+                $"❌  Mistakes:        {entry.Mistakes}\n\r" +
+                $"🎯  Precision:      {entry.Accuracy}%";
         }
 
         private void MostrarLeaderboard(string difficulty)
@@ -64,13 +64,23 @@ namespace memory_game.Forms
 
         private void FormVictory_Resize(object sender, EventArgs e)
         {
-            this.SuspendLayout();
-            int targetWidth = (this.Height * 4) / 3;
-            if (this.Width != targetWidth)
+            if (this.WindowState == FormWindowState.Normal)
             {
-                this.Width = targetWidth;
+                this.SuspendLayout();
+                int targetWidth = (this.Height * 4) / 3;
+
+                if (this.Width != targetWidth)
+                {
+                    this.Width = targetWidth;
+                }
+
+                this.ResumeLayout();
             }
-            this.ResumeLayout();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
