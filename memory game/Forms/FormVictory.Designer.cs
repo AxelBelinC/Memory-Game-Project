@@ -63,10 +63,10 @@
             this.listBoxScores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxScores.FormattingEnabled = true;
             this.listBoxScores.ItemHeight = 15;
-            this.listBoxScores.Location = new System.Drawing.Point(58, 64);
+            this.listBoxScores.Location = new System.Drawing.Point(48, 64);
             this.listBoxScores.Name = "listBoxScores";
             this.listBoxScores.ScrollAlwaysVisible = true;
-            this.listBoxScores.Size = new System.Drawing.Size(241, 124);
+            this.listBoxScores.Size = new System.Drawing.Size(251, 124);
             this.listBoxScores.TabIndex = 1;
             // 
             // btnPlayAgain
@@ -76,9 +76,9 @@
             this.btnPlayAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayAgain.ForeColor = System.Drawing.Color.White;
-            this.btnPlayAgain.Location = new System.Drawing.Point(148, 28);
+            this.btnPlayAgain.Location = new System.Drawing.Point(143, 28);
             this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(160, 49);
+            this.btnPlayAgain.Size = new System.Drawing.Size(170, 49);
             this.btnPlayAgain.TabIndex = 2;
             this.btnPlayAgain.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnPlayAgain.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(495, 28);
+            this.btnExit.Location = new System.Drawing.Point(507, 28);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(199, 50);
+            this.btnExit.Size = new System.Drawing.Size(175, 50);
             this.btnExit.TabIndex = 3;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -161,7 +161,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::memory_game.Properties.Resources.imgLeaderboard;
-            this.pictureBox2.Location = new System.Drawing.Point(88, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(76, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(189, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
