@@ -1123,6 +1123,26 @@ namespace memory_game.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgDifficulty {
+            get {
+                object obj = ResourceManager.GetObject("imgDifficulty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgEye {
+            get {
+                object obj = ResourceManager.GetObject("imgEye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgFondo {
             get {
                 object obj = ResourceManager.GetObject("imgFondo", resourceCulture);
@@ -1186,6 +1206,16 @@ namespace memory_game.Properties {
         internal static System.Drawing.Bitmap imgStartGame {
             get {
                 object obj = ResourceManager.GetObject("imgStartGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgTheme {
+            get {
+                object obj = ResourceManager.GetObject("imgTheme", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

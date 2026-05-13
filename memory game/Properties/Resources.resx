@@ -436,6 +436,12 @@
   <data name="imgBackToMenuGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgBackToMenuGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgDifficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgDifficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgEye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgEye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imgFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgFondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -456,6 +462,9 @@
   </data>
   <data name="imgStartGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgStartGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTheme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Math_1_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Math_1_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
