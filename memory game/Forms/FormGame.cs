@@ -41,8 +41,9 @@ namespace memory_game.Forms
         private System.Windows.Forms.Timer _panicoTimer;
         private System.Windows.Forms.Timer _clockTimer;
         private System.Windows.Forms.Timer _mismatchTimer;
-        private int _remainingSeconds = 0;
+        private int _remainingSeconds = 0; 
         private int _initialSeconds = 0;
+        private int _segundosJugados = 0; // cronometro de tiempo de juego
 
         // Botones del grid
         private Button[] _cardButtons;
@@ -310,6 +311,7 @@ namespace memory_game.Forms
             _clockTimer.Tick += (s, e) => 
             {
                 _remainingSeconds--;
+                _segundosJugados++;
                 ActualizarHUD();
 
                 // Modo pánico 
@@ -404,7 +406,7 @@ namespace memory_game.Forms
             };
         }
 
-        private async void CartaButton_Click(object sender, EventArgs e)
+        private void CartaButton_Click(object sender, EventArgs e)
         {
             if (_bloquearClicks) return; // función modo pánico
 
@@ -506,6 +508,7 @@ namespace memory_game.Forms
                     }
 
                     MostrarCarta(cardId);
+                    await Task.Delay(800);
                     MarcarEmparejadas();
                     ActualizarHUD();
 
@@ -595,7 +598,7 @@ namespace memory_game.Forms
             if (_contraMaquina)
             {
                 string turnoTexto = _IsPlayerTurn ? $"Your turn" : "AI's turn";
-                lblMoves.Text = $"You: {_puntosJugador}  |  AI: {_puntosIA}\n{turnoTexto}";
+                lblMoves.Text = $"{turnoTexto}\nYou: {_puntosJugador}  |  AI: {_puntosIA}";
                 lblMistakes.Text = $"Mistakes:\nYou: {_fallosJugador} | AI: {_fallosIA}";
             } else
             {
@@ -634,7 +637,7 @@ namespace memory_game.Forms
                 Difficulty = _difficulty.ToString(),
                 Moves = _engine.Moves,
                 Mistakes = _contraMaquina ? _fallosJugador: _engine.Mistakes,
-                Seconds = tiempoTotal,
+                Seconds = _segundosJugados,
                 Accuracy = _engine.GetAccuracy(),
                 Date = DateTime.Now
             };
@@ -708,11 +711,6 @@ namespace memory_game.Forms
 
                 this.ResumeLayout();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ActualizarVistaCartas(bool mostrarOriginales)

@@ -76,32 +76,36 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackgroundImage = global::memory_game.Properties.Resources.imgEye;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(57, 201);
+            this.button1.Location = new System.Drawing.Point(57, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(54, 55);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
+            this.button1.Resize += new System.EventHandler(this.FormGame_Resize);
             // 
             // lblMistakes
             // 
-            this.lblMistakes.AutoSize = true;
-            this.lblMistakes.Location = new System.Drawing.Point(53, 103);
+            this.lblMistakes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMistakes.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMistakes.Location = new System.Drawing.Point(-3, 112);
             this.lblMistakes.Name = "lblMistakes";
-            this.lblMistakes.Size = new System.Drawing.Size(61, 13);
+            this.lblMistakes.Size = new System.Drawing.Size(175, 59);
             this.lblMistakes.TabIndex = 5;
             this.lblMistakes.Text = "Mistakes: 0";
             this.lblMistakes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnReset
             // 
+            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnReset.BackgroundImage = global::memory_game.Properties.Resources.imgBackToMenuGame;
             this.btnReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -116,29 +120,36 @@
             // 
             // lblPairs
             // 
-            this.lblPairs.AutoSize = true;
-            this.lblPairs.Location = new System.Drawing.Point(52, 163);
+            this.lblPairs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPairs.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPairs.Location = new System.Drawing.Point(0, 192);
             this.lblPairs.Name = "lblPairs";
-            this.lblPairs.Size = new System.Drawing.Size(62, 13);
+            this.lblPairs.Size = new System.Drawing.Size(169, 23);
             this.lblPairs.TabIndex = 3;
             this.lblPairs.Text = "Pairs : 0 / ?";
+            this.lblPairs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTimer
             // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(65, 12);
+            this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTimer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(0, 9);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(39, 16);
+            this.lblTimer.Size = new System.Drawing.Size(169, 24);
             this.lblTimer.TabIndex = 2;
             this.lblTimer.Text = "00:00";
+            this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMoves
             // 
-            this.lblMoves.AutoSize = true;
-            this.lblMoves.Location = new System.Drawing.Point(47, 49);
+            this.lblMoves.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMoves.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoves.Location = new System.Drawing.Point(-3, 44);
             this.lblMoves.Name = "lblMoves";
-            this.lblMoves.Size = new System.Drawing.Size(74, 13);
+            this.lblMoves.Size = new System.Drawing.Size(175, 68);
             this.lblMoves.TabIndex = 1;
             this.lblMoves.Text = "Movements: 0";
             this.lblMoves.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +199,6 @@
             this.Resize += new System.EventHandler(this.FormGame_Resize);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

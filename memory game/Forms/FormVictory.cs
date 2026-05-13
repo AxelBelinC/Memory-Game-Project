@@ -22,11 +22,17 @@ namespace memory_game.Forms
         private void MostrarEstadisticas(ScoreEntry entry)
         {
             lblStats.Text =
-                $"🎉 ¡Congratulations, {entry.PlayerName}!\n\n" +
-                $"⏱  Time:             {entry.Seconds / 60:00}:{entry.Seconds % 60:00}\n\r" +
-                $"🔢  Movements:   {entry.Moves}\n\r" +
-                $"❌  Mistakes:        {entry.Mistakes}\n\r" +
-                $"🎯  Precision:      {entry.Accuracy}%";
+                $"🎉 ¡Congratulations, {entry.PlayerName}!\n\n";
+
+            lblTitles.Text = "⏱  Time:\n" +
+                  "🔢  Movements:\n" +
+                  "❌  Mistakes:\n" +
+                  "🎯  Precision:";
+
+            lblValues.Text = $"{entry.Seconds / 60:00}:{entry.Seconds % 60:00}\n" +
+                  $"{entry.Moves}\n" +
+                  $"{entry.Mistakes}\n" +
+                  $"{entry.Accuracy}%";
         }
 
         private void MostrarLeaderboard(string difficulty)
@@ -76,11 +82,6 @@ namespace memory_game.Forms
 
                 this.ResumeLayout();
             }
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
