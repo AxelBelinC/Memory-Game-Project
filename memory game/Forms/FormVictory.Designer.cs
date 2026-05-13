@@ -37,17 +37,17 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTitles = new System.Windows.Forms.Label();
             this.lblValues = new System.Windows.Forms.Label();
+            this.lblTitles = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStats
@@ -66,7 +66,7 @@
             this.listBoxScores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBoxScores.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listBoxScores.BackColor = System.Drawing.Color.LightBlue;
             this.listBoxScores.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxScores.FormattingEnabled = true;
             this.listBoxScores.HorizontalScrollbar = true;
@@ -74,7 +74,7 @@
             this.listBoxScores.Location = new System.Drawing.Point(14, 64);
             this.listBoxScores.Name = "listBoxScores";
             this.listBoxScores.ScrollAlwaysVisible = true;
-            this.listBoxScores.Size = new System.Drawing.Size(271, 130);
+            this.listBoxScores.Size = new System.Drawing.Size(282, 130);
             this.listBoxScores.TabIndex = 1;
             // 
             // btnPlayAgain
@@ -179,6 +179,39 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblValues);
+            this.panel2.Controls.Add(this.lblTitles);
+            this.panel2.Controls.Add(this.lblStats);
+            this.panel2.Location = new System.Drawing.Point(392, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(383, 212);
+            this.panel2.TabIndex = 2;
+            // 
+            // lblValues
+            // 
+            this.lblValues.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblValues.AutoSize = true;
+            this.lblValues.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValues.Location = new System.Drawing.Point(244, 64);
+            this.lblValues.Name = "lblValues";
+            this.lblValues.Size = new System.Drawing.Size(63, 27);
+            this.lblValues.TabIndex = 2;
+            this.lblValues.Text = "Stats";
+            this.lblValues.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblTitles
+            // 
+            this.lblTitles.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitles.AutoSize = true;
+            this.lblTitles.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitles.Location = new System.Drawing.Point(53, 64);
+            this.lblTitles.Name = "lblTitles";
+            this.lblTitles.Size = new System.Drawing.Size(63, 27);
+            this.lblTitles.TabIndex = 1;
+            this.lblTitles.Text = "Stats";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
@@ -195,39 +228,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(778, 106);
             this.tableLayoutPanel3.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblValues);
-            this.panel2.Controls.Add(this.lblTitles);
-            this.panel2.Controls.Add(this.lblStats);
-            this.panel2.Location = new System.Drawing.Point(392, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(383, 212);
-            this.panel2.TabIndex = 2;
-            // 
-            // lblTitles
-            // 
-            this.lblTitles.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTitles.AutoSize = true;
-            this.lblTitles.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitles.Location = new System.Drawing.Point(53, 64);
-            this.lblTitles.Name = "lblTitles";
-            this.lblTitles.Size = new System.Drawing.Size(63, 27);
-            this.lblTitles.TabIndex = 1;
-            this.lblTitles.Text = "Stats";
-            // 
-            // lblValues
-            // 
-            this.lblValues.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblValues.AutoSize = true;
-            this.lblValues.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValues.Location = new System.Drawing.Point(244, 64);
-            this.lblValues.Name = "lblValues";
-            this.lblValues.Size = new System.Drawing.Size(63, 27);
-            this.lblValues.TabIndex = 2;
-            this.lblValues.Text = "Stats";
-            this.lblValues.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FormVictory
             // 
@@ -246,9 +246,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
